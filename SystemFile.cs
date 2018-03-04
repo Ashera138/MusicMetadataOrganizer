@@ -1,13 +1,16 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.IO;
 
 namespace MusicMetadataUpdater_v2._0
 {
     public class SystemFile : IFile
     {
-        private string _filepath;
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int FileId { get; set; }
+        private string _filepath;
         public string Filepath
         {
             get
@@ -22,11 +25,11 @@ namespace MusicMetadataUpdater_v2._0
             }
         }
         [StringLength(100)]
-        public string FileName { get; set; }
+        public string Name { get; set; }
         [StringLength(260)]
-        public string FileDirectory { get; set; }
+        public string Directory { get; set; }
         [StringLength(10)]
-        public string FileExtension { get; set; }
+        public string Extension { get; set; }
         public DateTime CreationTime { get; set; }
         public DateTime LastAccessTime { get; set; }
         public long LengthInBytes { get; set; }
@@ -48,9 +51,9 @@ namespace MusicMetadataUpdater_v2._0
         private void PopulateFields()
         {
             Filepath = SysIOFile.FullName;
-            FileName = SysIOFile.Name;
-            FileDirectory = SysIOFile.DirectoryName;
-            FileExtension = SysIOFile.Extension;
+            Name = SysIOFile.Name;
+            Directory = SysIOFile.DirectoryName;
+            Extension = SysIOFile.Extension;
             CreationTime = Convert.ToDateTime(SysIOFile.CreationTime);
             LastAccessTime = Convert.ToDateTime(SysIOFile.LastAccessTime);
             LengthInBytes = SysIOFile.Length;
@@ -58,16 +61,18 @@ namespace MusicMetadataUpdater_v2._0
 
         public void Save()
         {
-            throw new NotImplementedException();
+            //FileManipulator.MoveToCorrectArtistLocation(this);
+            //FileManipulator.MoveToCorrectAlbumLocation(this);
+            //FileManipulator.RenameFile(this);
         }
 
         public bool Equals(IFile file)
         {
             bool isEqual = true;
             var systemFile = file as SystemFile;
-            if (FileName != systemFile.FileName ||
-                FileDirectory != systemFile.FileDirectory ||
-                FileExtension != systemFile.FileExtension ||
+            if (Name != systemFile.Name ||
+                Directory != systemFile.Directory ||
+                Extension != systemFile.Extension ||
                 CreationTime != systemFile.CreationTime ||
                 LastAccessTime != systemFile.LastAccessTime ||
                 LengthInBytes != systemFile.LengthInBytes)

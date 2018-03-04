@@ -1,13 +1,19 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.IO;
 
 namespace MusicMetadataUpdater_v2._0
 {
     public class MetadataFile : IFile
     {
-        private string _filepath;
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [ForeignKey("SystemFile")]
+        public int FileId { get; set; }
+        public SystemFile SystemFile { get; set; }
+
+        private string _filepath;
         public string Filepath
         {
             get
@@ -64,8 +70,8 @@ namespace MusicMetadataUpdater_v2._0
             }
             catch (Exception ex)
             {
-                LogWriter.Write($"MetadataFile.CreateTagLibFile() - Could not create a TagLibFile object from '{Filepath}'. " +
-                    $"{ex.GetType()}: \"{ex.Message}\"");
+                LogWriter.Write($"MetadataFile.CreateTagLibFile() - Could not create a TagLibFile object from " +
+                    $"'{Filepath}'. {ex.GetType()}: \"{ex.Message}\"");
             }
         }
 
@@ -134,7 +140,7 @@ namespace MusicMetadataUpdater_v2._0
 
         private void LoadCurrentMetadataIntoTagLibFileField()
         {
-            UpdateTagLibFileFieldsArtistTags();
+            LoadCurrentArtistIntoTagLibFileField();
             TagLibFile.Tag.Album = Album;
             TagLibFile.Tag.Genres = Genres.Split(',');
             TagLibFile.Tag.Title = Title;
@@ -142,7 +148,7 @@ namespace MusicMetadataUpdater_v2._0
             TagLibFile.Tag.Year = Year;
         }
 
-        private void UpdateTagLibFileFieldsArtistTags()
+        private void LoadCurrentArtistIntoTagLibFileField()
         {
 #pragma warning disable CS0618 // Type or member is obsolete
             TagLibFile.Tag.Artists = new string[] { Artist };
@@ -159,7 +165,8 @@ namespace MusicMetadataUpdater_v2._0
             }
             catch (Exception ex)
             {
-                LogWriter.Write($"MetadataFile.SaveTagLibFile() - Can not save taglib data to '{Filepath}'. {ex.GetType()}: \"{ex.Message}\"");
+                LogWriter.Write($"MetadataFile.SaveTagLibFile() - " +
+                    $"Can not save taglib data to '{Filepath}'. {ex.GetType()}: \"{ex.Message}\"");
             }
         }
 

@@ -9,8 +9,6 @@ d:\my documents\visual studio 2017\Projects\MusicMetadataUpdater_v2.0\MusicMetad
 d:\my documents\visual studio 2017\Projects\MusicMetadataUpdater_v2.0\MusicMetadataUpdater_v2.0\obj\Debug\MusicMetadataUpdater_v2.0.csproj.CoreCompileInputs.cache
 d:\my documents\visual studio 2017\Projects\MusicMetadataUpdater_v2.0\MusicMetadataUpdater_v2.0\obj\Debug\MusicMetadataUpdater_v2.0.exe
 d:\my documents\visual studio 2017\Projects\MusicMetadataUpdater_v2.0\MusicMetadataUpdater_v2.0\obj\Debug\MusicMetadataUpdater_v2.0.pdb
-d:\my documents\visual studio 2017\Projects\MusicMetadataUpdater_v2.0\MusicMetadataUpdater_v2.0\obj\Debug\MusicMetadataUpdater_v2._0.Migrations.InitialCreate.resources
-d:\my documents\visual studio 2017\Projects\MusicMetadataUpdater_v2.0\MusicMetadataUpdater_v2.0\obj\Debug\MusicMetadataUpdater_v2.0.csproj.GenerateResource.Cache
 d:\my documents\visual studio 2017\Projects\MusicMetadataUpdater_v2.0\MusicMetadataUpdater_v2.0\bin\Debug\ParkSquare.Gracenote.dll
 d:\my documents\visual studio 2017\Projects\MusicMetadataUpdater_v2.0\MusicMetadataUpdater_v2.0\bin\Debug\policy.2.0.taglib-sharp.dll
 d:\my documents\visual studio 2017\Projects\MusicMetadataUpdater_v2.0\MusicMetadataUpdater_v2.0\bin\Debug\taglib-sharp.dll
