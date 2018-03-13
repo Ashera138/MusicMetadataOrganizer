@@ -29,9 +29,7 @@ namespace MusicMetadataUpdater_v2._0
 
         private void RenameDirectory(Regex directoryRegex, string newName)
         {
-            Group directoryRegexGroup = directoryRegex.Match(_systemFile.Filepath).Groups[1];
-            string sanitizedNewName = StringCleaner.RemoveInvalidDirectoryCharacters(newName);
-            string newDirectory = directoryRegexGroup.Replace(_systemFile.Directory, sanitizedNewName + "\\");
+            string newDirectory = CreateSanitizedDirectoryName(directoryRegex, newName);
             DirectoryInfo currentDirectory = GetDirectoryInfo(_systemFile.Directory);
 
             if (_systemFile.Directory != newDirectory)
@@ -45,6 +43,14 @@ namespace MusicMetadataUpdater_v2._0
             }
             // See why I can't take out this variable re-initialization
             DeleteEmptyFolders(GetDirectoryInfo(_systemFile.Directory));
+        }
+
+        private string CreateSanitizedDirectoryName(Regex directoryRegex, string newName)
+        {
+            Group directoryRegexGroup = directoryRegex.Match(_systemFile.Filepath).Groups[1];
+            string sanitizedNewName = StringCleaner.RemoveInvalidDirectoryCharacters(newName);
+            string newDirectory = directoryRegexGroup.Replace(_systemFile.Directory, sanitizedNewName + "\\");
+            return newDirectory;
         }
 
         private bool NamesAreEqualIgnoringCase(string oldName, string newName)
@@ -99,29 +105,27 @@ namespace MusicMetadataUpdater_v2._0
             _systemFile.Directory = destDirectory;
         }
 
-        // Refactor more
         private void DeleteEmptyFolders(DirectoryInfo folder)
         {
-            if (!HasFiles(folder))
+            if (HasFiles(folder))
+                return;
+            try
             {
-                try
+                if (HasFiles(folder.Parent))
                 {
-                    if (HasFiles(folder.Parent))
-                    {
-                        folder.Delete();
-                        return;
-                    }
+                    folder.Delete();
+                    return;
+                }
 
-                    if (!FilesExistInSubdirectories(folder.Parent))
-                    {
-                        folder.Parent.Delete(true);
-                    }
-                }
-                catch (Exception ex)
+                if (!FilesExistInSubdirectories(folder.Parent))
                 {
-                    LogWriter.Write($"FileManipulator.DeleteEmptyParentFolder() - Can not delete " +
-                        $"'{folder.Parent.FullName}'. {ex.GetType()}: \"{ex.Message}\"");
+                    folder.Parent.Delete(true);
                 }
+            }
+            catch (Exception ex)
+            {
+                LogWriter.Write($"FileManipulator.DeleteEmptyParentFolder() - Can not delete " +
+                    $"'{folder.Parent.FullName}'. {ex.GetType()}: \"{ex.Message}\"");
             }
         }
 
@@ -147,14 +151,21 @@ namespace MusicMetadataUpdater_v2._0
         public void RenameFile(string songTitle)
         {
             var currentFileName = _systemFile.Name;
-            var newFileName = songTitle + _systemFile.Extension;
-            var validFileName = StringCleaner.RemoveInvalidFileNameCharacters(newFileName);
-            if (currentFileName != validFileName)
+            string newFileName = CreateSanitizedFileName(songTitle);
+
+            if (currentFileName != newFileName)
             {
-                RenameFile(_systemFile.Filepath, validFileName);
-                _systemFile.Name = validFileName;
-                _systemFile.Filepath = Path.Combine(_systemFile.Directory, _systemFile.Name);  
+                RenameFile(_systemFile.Filepath, newFileName);
+                _systemFile.Name = newFileName;
+                _systemFile.Filepath = Path.Combine(_systemFile.Directory, _systemFile.Name);
             }
+        }
+
+        private string CreateSanitizedFileName(string newName)
+        {
+            var newFileName = newName + _systemFile.Extension;
+            var validFileName = StringCleaner.RemoveInvalidFileNameCharacters(newFileName);
+            return validFileName;
         }
 
         // Potentially rename
@@ -193,10 +204,5 @@ namespace MusicMetadataUpdater_v2._0
             currentFile.MoveTo(tempPath);
             _systemFile.Filepath = tempPath;
         }
-
-        // Refactoring TO-DOs:
-        // Naming consistency - Move/Rename
-        // Consider reordering methods - public ones at the top (RenameFile(string songTitle))
-            // GetFileInfo under GetDirectoryInfo
     }
 }

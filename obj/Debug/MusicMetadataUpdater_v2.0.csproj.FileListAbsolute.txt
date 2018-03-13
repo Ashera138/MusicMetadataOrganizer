@@ -13,3 +13,4 @@ d:\my documents\visual studio 2017\Projects\MusicMetadataUpdater_v2.0\MusicMetad
 d:\my documents\visual studio 2017\Projects\MusicMetadataUpdater_v2.0\MusicMetadataUpdater_v2.0\bin\Debug\policy.2.0.taglib-sharp.dll
 d:\my documents\visual studio 2017\Projects\MusicMetadataUpdater_v2.0\MusicMetadataUpdater_v2.0\bin\Debug\taglib-sharp.dll
 d:\my documents\visual studio 2017\Projects\MusicMetadataUpdater_v2.0\MusicMetadataUpdater_v2.0\bin\Debug\policy.2.0.taglib-sharp.config
+d:\my documents\visual studio 2017\Projects\MusicMetadataUpdater_v2.0\MusicMetadataUpdater_v2.0\obj\Debug\MusicMetadataUpdater_v2.0.csproj.CopyComplete

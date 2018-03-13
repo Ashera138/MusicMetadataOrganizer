@@ -48,7 +48,6 @@ namespace MusicMetadataUpdater_v2._0
         public bool CheckForUpdates { get; set; }
         private TagLib.File TagLibFile { get; set; }
 
-        // This will be called by the database via EF
         private MetadataFile()
         {
             CreateTagLibFile();
