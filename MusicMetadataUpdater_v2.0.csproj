@@ -69,6 +69,7 @@
     <Compile Include="RegexExtensions.cs" />
     <Compile Include="RESPONSE.cs" />
     <Compile Include="StringCleaner.cs" />
+    <Compile Include="StringExtensions.cs" />
     <Compile Include="SystemFile.cs" />
     <Compile Include="MetadataFile.cs" />
     <Compile Include="XmlGenerator.cs" />

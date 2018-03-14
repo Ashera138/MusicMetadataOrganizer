@@ -2,6 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.IO;
+using System.Text.RegularExpressions;
 
 namespace MusicMetadataUpdater_v2._0
 {
@@ -9,7 +10,9 @@ namespace MusicMetadataUpdater_v2._0
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [ForeignKey("MetadataFile")]
         public int FileId { get; set; }
+        public MetadataFile MetadataFile { get; set; }
         private string _filepath;
         public string Filepath
         {
@@ -61,9 +64,11 @@ namespace MusicMetadataUpdater_v2._0
 
         public void Save()
         {
-            //FileManipulator.MoveToCorrectArtistLocation(this);
-            //FileManipulator.MoveToCorrectAlbumLocation(this);
-            //FileManipulator.RenameFile(this);
+            if (MetadataFile == null)
+                throw new ArgumentNullException("Attempted to save SystemFile when its MetadataFile property is null.");
+            MoveToCorrectArtistLocation();
+            MoveToCorrectAlbumLocation();
+            RenameFile();
         }
 
         public bool Equals(IFile file)
@@ -78,6 +83,124 @@ namespace MusicMetadataUpdater_v2._0
                 LengthInBytes != systemFile.LengthInBytes)
                     isEqual = false;
             return isEqual;
+        }
+
+        public void MoveToCorrectArtistLocation()
+        {
+            Regex artistDirectoryRegex = new Regex(@"([^\\]+)\\([^\\]+)\\([^\\]+)$");
+            RenameDirectory(artistDirectoryRegex, MetadataFile.Artist);
+        }
+
+        public void MoveToCorrectAlbumLocation()
+        {
+            Regex albumDirectoryRegex = new Regex(@"([^\\]+)\\([^\\]+)$");
+            RenameDirectory(albumDirectoryRegex, MetadataFile.Album);
+        }
+
+        private void RenameDirectory(Regex directoryRegex, string newName)
+        {
+            string newDirectory = CreateSanitizedDirectoryName(directoryRegex, newName);
+            DirectoryInfo currentDirectory = FileManipulator.GetDirectoryInfo(this.Directory);
+
+            if (this.Directory != newDirectory)
+            {
+                if (this.Directory.EqualsIgnoreCase(newDirectory))
+                {
+                    RenameDirectoryAsTemp(currentDirectory);
+                    currentDirectory = FileManipulator.GetDirectoryInfo(this.Directory);
+                }
+                RenameFolder(currentDirectory, newDirectory);
+            }
+            FileManipulator.DeleteEmptyFolders(currentDirectory);
+        }
+
+        private string CreateSanitizedDirectoryName(Regex directoryRegex, string newName)
+        {
+            Group directoryRegexGroup = directoryRegex.Match(this.Filepath).Groups[1];
+            string sanitizedNewName = StringCleaner.RemoveInvalidDirectoryCharacters(newName);
+            string newDirectory = directoryRegexGroup.Replace(this.Directory, sanitizedNewName);
+            return newDirectory;
+        }
+
+        private void RenameDirectoryAsTemp(DirectoryInfo currentDirectory)
+        {
+            var tempPath = currentDirectory.FullName.Replace(currentDirectory.Name, @"_temp\");
+            currentDirectory.MoveTo(tempPath);
+            this.Directory = tempPath;
+            this.Filepath = Path.Combine(tempPath, this.Name);
+        }
+
+        private void RenameFolder(DirectoryInfo currentDirectory, string destDirectory)
+        {
+            try
+            {
+                FileManipulator.CreateDirectory(destDirectory);
+                MoveFileAfterDirectoryRename(destDirectory);
+            }
+            catch (Exception ex)
+            {
+                LogWriter.Write($"FileManipulator.RenameFolder - Can not rename (move) '{currentDirectory.FullName}' " +
+                        $"to '{destDirectory}'. {ex.GetType()}: \"{ex.Message}\"");
+            }
+        }
+
+        private void MoveFileAfterDirectoryRename(string destDirectory)
+        {
+            var newFilepath = this.Filepath.Replace(this.Directory, destDirectory);
+            File.Move(this.Filepath, newFilepath);
+            this.Filepath = newFilepath;
+            this.Directory = destDirectory;
+        }
+
+        public void RenameFile()
+        {
+            var newFileName = CreateSanitizedFileName(MetadataFile.Title);
+            if (this.Name != newFileName)
+            {
+                if (TryRenameFile(newFileName))
+                {
+                    this.Name = newFileName;
+                    this.Filepath = Path.Combine(this.Directory, this.Name);
+                }
+            }
+        }
+
+        private string CreateSanitizedFileName(string newName)
+        {
+            var newFileName = newName + this.Extension;
+            var validFileName = StringCleaner.RemoveInvalidFileNameCharacters(newFileName);
+            return validFileName;
+        }
+
+        private bool TryRenameFile(string newFileName)
+        {
+            bool success;
+            var fileInfo = FileManipulator.GetFileInfo(this.Filepath);
+            var currentFileName = fileInfo.Name;
+            var destPath = this.Filepath.Replace(currentFileName, newFileName);
+
+            try
+            {
+                if (currentFileName.EqualsIgnoreCase(newFileName))
+                    RenameFileAsTemp(fileInfo);
+                fileInfo.MoveTo(destPath);
+                success = true;
+            }
+
+            catch (Exception ex)
+            {
+                LogWriter.Write($"FileManipulator.RenameFile() - Can not rename (move) " +
+                    $"'{this.Filepath}' to '{destPath}'. {ex.GetType()}: \"{ex.Message}\"");
+                success = false;
+            }
+            return success;
+        }
+
+        private void RenameFileAsTemp(FileInfo currentFile)
+        {
+            var tempPath = currentFile.FullName.Replace(currentFile.Name, @"_temp");
+            currentFile.MoveTo(tempPath);
+            this.Filepath = tempPath;
         }
     }
 }

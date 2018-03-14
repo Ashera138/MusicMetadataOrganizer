@@ -9,9 +9,9 @@ namespace MusicMetadataUpdater_v2._0
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        [ForeignKey("SystemFile")]
+        //[ForeignKey("SystemFile")]
         public int FileId { get; set; }
-        public SystemFile SystemFile { get; set; }
+        //public SystemFile SystemFile { get; set; }
 
         private string _filepath;
         public string Filepath
@@ -65,7 +65,7 @@ namespace MusicMetadataUpdater_v2._0
         {
             try
             {
-                var file = TagLib.File.Create(Filepath);
+                TagLibFile = TagLib.File.Create(Filepath);
             }
             catch (Exception ex)
             {
