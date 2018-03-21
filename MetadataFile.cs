@@ -9,10 +9,7 @@ namespace MusicMetadataUpdater_v2._0
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        //[ForeignKey("SystemFile")]
         public int FileId { get; set; }
-        //public SystemFile SystemFile { get; set; }
-
         private string _filepath;
         public string Filepath
         {
@@ -111,7 +108,7 @@ namespace MusicMetadataUpdater_v2._0
             {
                 var tag = file.GetTag(TagLib.TagTypes.Id3v2);
                 var frame = TagLib.Id3v2.PopularimeterFrame.Get((TagLib.Id3v2.Tag)tag, "WindowsUser", true);
-                rating= frame.Rating;
+                rating = frame.Rating;
             }
             catch (Exception)
             {
@@ -131,10 +128,22 @@ namespace MusicMetadataUpdater_v2._0
             Genres = gracenoteAPIResult.ALBUM.GENRE;
         }
 
-        public void Save()
+        public bool TrySave()
         {
-            LoadCurrentMetadataIntoTagLibFileField();
-            SaveTagLibFile();
+            bool success;
+            try
+            {
+                LoadCurrentMetadataIntoTagLibFileField();
+                TagLibFile.Save();
+                success = true;
+            }
+            catch (Exception ex)
+            {
+                LogWriter.Write($"MetadataFile.TrySave() - " +
+                    $"Can not save TagLib data to '{Filepath}'. {ex.GetType()}: \"{ex.Message}\"");
+                success = false;
+            }
+            return success;
         }
 
         private void LoadCurrentMetadataIntoTagLibFileField()
@@ -154,19 +163,6 @@ namespace MusicMetadataUpdater_v2._0
 #pragma warning restore CS0618 // Type or member is obsolete
             TagLibFile.Tag.AlbumArtists = new string[] { Artist };
             TagLibFile.Tag.Performers = new string[] { Artist };
-        }
-
-        private void SaveTagLibFile()
-        {
-            try
-            {
-                TagLibFile.Save();
-            }
-            catch (Exception ex)
-            {
-                LogWriter.Write($"MetadataFile.SaveTagLibFile() - " +
-                    $"Can not save taglib data to '{Filepath}'. {ex.GetType()}: \"{ex.Message}\"");
-            }
         }
 
         public bool Equals(IFile file)

@@ -2,13 +2,12 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text.RegularExpressions;
 
 namespace MusicMetadataUpdater_v2._0
 {
-    public static class FileManipulator
-    { 
-        public static DirectoryInfo GetDirectoryInfo(string directory)
+    internal static class FileManipulator
+    {
+        internal static DirectoryInfo GetDirectoryInfo(string directory)
         {
             DirectoryInfo directoryInfo;
             if (Directory.Exists(directory))
@@ -19,7 +18,7 @@ namespace MusicMetadataUpdater_v2._0
             return directoryInfo;
         }
 
-        public static FileInfo GetFileInfo(string filepath)
+        internal static FileInfo GetFileInfo(string filepath)
         {
             FileInfo fileInfo;
             if (File.Exists(filepath))
@@ -30,33 +29,44 @@ namespace MusicMetadataUpdater_v2._0
             return fileInfo;
         }
 
-        public static void CreateDirectory(string directory)
+        internal static void CreateDirectory(string directory)
         {
             if (!Directory.Exists(directory))
                 Directory.CreateDirectory(directory);
         }
 
-        public static void DeleteEmptyFolders(DirectoryInfo folder)
+        internal static void DeleteEmptyFolders(DirectoryInfo directoryInfo)
         {
-            if (HasFiles(folder))
-                return;
             try
             {
-                if (HasFiles(folder.Parent))
+                DeleteEmptySubdirectories(directoryInfo);
+                if (!HasFiles(directoryInfo) && !FilesExistInSubdirectories(directoryInfo))
                 {
-                    folder.Delete();
-                    return;
-                }
-
-                if (!FilesExistInSubdirectories(folder.Parent))
-                {
-                    folder.Parent.Delete(true);
+                    Directory.Delete(directoryInfo.FullName);
+                    if (!HasFiles(directoryInfo.Parent) && !FilesExistInSubdirectories(directoryInfo.Parent))
+                        directoryInfo.Parent.Delete();
                 }
             }
-            catch (Exception ex)
+            catch (UnauthorizedAccessException)
             {
-                LogWriter.Write($"FileManipulator.DeleteEmptyParentFolder() - Can not delete " +
-                    $"'{folder.Parent.FullName}'. {ex.GetType()}: \"{ex.Message}\"");
+
+            }
+            catch (IOException)
+            {
+
+            }
+        }
+
+        private static void DeleteEmptySubdirectories(DirectoryInfo folder)
+        {
+            foreach (var subdirectoryPath in GetEmptyDirectories(folder.FullName))
+            {
+                var subdirectory = GetDirectoryInfo(subdirectoryPath);
+                if (!HasFiles(subdirectory))
+                {
+                    DeleteEmptySubdirectories(subdirectory);
+                    Directory.Delete(subdirectoryPath);
+                }
             }
         }
 
@@ -67,16 +77,43 @@ namespace MusicMetadataUpdater_v2._0
             return files.Count() > 0 ? true : false;
         }
 
-        // Make this recursive to check lower subdirectories?
         private static bool FilesExistInSubdirectories(DirectoryInfo folder)
         {
             bool hasFiles = false;
-            foreach (DirectoryInfo directory in folder.EnumerateDirectories())
+            foreach (var directory in GetEmptyDirectories(folder.FullName))
             {
-                if (HasFiles(directory))
+                if (HasFiles(GetDirectoryInfo(directory)))
                     hasFiles = true;
             }
             return hasFiles;
+        }
+
+        private static List<string> GetEmptyDirectories(string directory, string searchPattern = "*",
+                                                  SearchOption searchOption = SearchOption.AllDirectories)
+        {
+            if (searchOption == SearchOption.TopDirectoryOnly)
+                return Directory.GetDirectories(directory, searchPattern).ToList();
+
+            var directories = new List<string>(GetEmptyDirectories(directory, searchPattern));
+
+            for (int i = 0; i < directories.Count(); i++)
+            {
+                directories.AddRange(GetEmptyDirectories(directories[i], searchPattern));
+            }
+
+            return directories;
+        }
+
+        private static List<string> GetEmptyDirectories(string path, string searchPattern)
+        {
+            try
+            {
+                return Directory.GetDirectories(path, searchPattern).ToList();
+            }
+            catch (UnauthorizedAccessException)
+            {
+                return new List<string>();
+            }
         }
     }
 }

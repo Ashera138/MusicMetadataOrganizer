@@ -1,16 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MusicMetadataUpdater_v2._0
 {
     public static class StringExtensions
     {
-        public static bool EqualsIgnoreCase(this string firstString, string secondString)
+        public static bool EqualsIgnoreCase(this string string1, string string2)
         {
-            return firstString.Equals(secondString, StringComparison.OrdinalIgnoreCase);
+            return string1.Equals(string2, StringComparison.OrdinalIgnoreCase);
         }
     }
 }

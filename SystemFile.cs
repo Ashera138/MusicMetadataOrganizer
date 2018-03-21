@@ -62,13 +62,25 @@ namespace MusicMetadataUpdater_v2._0
             LengthInBytes = SysIOFile.Length;
         }
 
-        public void Save()
+        public bool TrySave()
         {
-            if (MetadataFile == null)
-                throw new ArgumentNullException("Attempted to save SystemFile when its MetadataFile property is null.");
-            MoveToCorrectArtistLocation();
-            MoveToCorrectAlbumLocation();
-            RenameFile();
+            bool success;
+            try
+            {
+                if (MetadataFile == null)
+                    throw new ArgumentNullException("Attempted to save SystemFile when its MetadataFile property is null.");
+                MoveToCorrectArtistLocation();
+                MoveToCorrectAlbumLocation();
+                RenameFile();
+                success = true;
+            }
+            catch (Exception ex)
+            {
+                LogWriter.Write($"SystemFile.TrySave() - " +
+                    $"Can not save SystemFile to '{Filepath}'. {ex.GetType()}: \"{ex.Message}\"");
+                success = false;
+            }
+            return success;
         }
 
         public bool Equals(IFile file)

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MusicMetadataUpdater_v2._0
 {
-    // Change this nasty hard-coded shit
+    // Change this nasty hard-coded stuff
     internal static class XmlGenerator
     {
         private const string clientId = "834201935-7F828E5FFAED9EFA8048694BBCD7BD05";

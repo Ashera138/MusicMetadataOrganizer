@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MusicMetadataUpdater_v2._0
+﻿namespace MusicMetadataUpdater_v2._0
 {
     public interface IFile
     {
         string Filepath { get; set; }
-        void Save();
+        bool TrySave();
         bool Equals(IFile file);
     }
 }
