@@ -35,26 +35,26 @@ namespace MusicMetadataUpdater_v2._0
                 Directory.CreateDirectory(directory);
         }
 
-        internal static void DeleteEmptyFolders(DirectoryInfo directoryInfo)
+        internal static void DeleteEmptyFolders(DirectoryInfo folder)
         {
             try
             {
-                DeleteEmptySubdirectories(directoryInfo);
-                if (!HasFiles(directoryInfo) && !FilesExistInSubdirectories(directoryInfo))
+                DeleteEmptySubdirectories(folder);
+                if (!HasFiles(folder) && !FilesExistInSubdirectories(folder))
                 {
-                    Directory.Delete(directoryInfo.FullName);
-                    if (!HasFiles(directoryInfo.Parent) && !FilesExistInSubdirectories(directoryInfo.Parent))
-                        directoryInfo.Parent.Delete();
+                    Directory.Delete(folder.FullName);
+                    if (!HasFiles(folder.Parent) && !FilesExistInSubdirectories(folder.Parent))
+                        folder.Parent.Delete();
                 }
-            }
-            catch (UnauthorizedAccessException)
-            {
-
             }
             catch (IOException)
             {
 
             }
+            catch (UnauthorizedAccessException)
+            {
+
+            }          
         }
 
         private static void DeleteEmptySubdirectories(DirectoryInfo folder)

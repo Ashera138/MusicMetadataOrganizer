@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MusicMetadataUpdater_v2._0
 {
@@ -12,8 +9,8 @@ namespace MusicMetadataUpdater_v2._0
 
         static void Main(string[] args)
         {
-            var tglbFiles = _db.TagLibFiles.ToList();
-            foreach (var item in tglbFiles)
+            var metadataFiles = _db.TagLibFiles.ToList();
+            foreach (var item in metadataFiles)
             {
                 Console.WriteLine(item.ToString());
             }

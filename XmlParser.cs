@@ -6,13 +6,13 @@ namespace MusicMetadataUpdater_v2._0
 {
     internal static class XmlParser
     {
-        // Try to change this to not return a list, but just an object
-        internal static List<RESPONSE> XmlToObject(string xml)
+        internal static RESPONSE XmlToRESPONSEObject(string xml)
         {
             var serializer = new XmlSerializer(typeof(List<RESPONSE>), new XmlRootAttribute("RESPONSES"));
             using (var stringReader = new StringReader(xml))
             {
-                return (List<RESPONSE>)serializer.Deserialize(stringReader);
+                var results = (List<RESPONSE>)serializer.Deserialize(stringReader);
+                return results[0];
             }
         }
     }
