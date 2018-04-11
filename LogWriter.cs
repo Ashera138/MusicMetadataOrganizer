@@ -7,18 +7,13 @@ namespace MusicMetadataUpdater_v2._0
     public static class LogWriter
     {
         private static string app_exePath;
-        
+
         static LogWriter()
         {
             app_exePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
         }
 
         public static void Write(string logMessage)
-        {
-            Log(logMessage);
-        }
-
-        private static void Log(string logMessage)
         {
             try
             {
@@ -35,18 +30,11 @@ namespace MusicMetadataUpdater_v2._0
 
         private static void AppendMessageToLogWithTextWriter(string logMessage, TextWriter txtWriter)
         {
-            try
-            {
-                txtWriter.Write("\r\nLog Entry : ");
-                txtWriter.WriteLine($"{DateTime.Now.ToLongTimeString()} {DateTime.Now.ToLongDateString()}");
-                txtWriter.WriteLine("  :");
-                txtWriter.WriteLine($"  :{logMessage}");
-                txtWriter.WriteLine("-------------------------------");
-            }
-            catch (Exception ex)
-            {
-                throw new Exception($"Could not write to error log in {app_exePath}. {ex.GetType()}: \"{ex.Message}\"");
-            }
+            txtWriter.Write("\r\nLog Entry : ");
+            txtWriter.WriteLine($"{DateTime.Now.ToLongTimeString()} {DateTime.Now.ToLongDateString()}");
+            txtWriter.WriteLine("  :");
+            txtWriter.WriteLine($"  :{logMessage}");
+            txtWriter.WriteLine("-------------------------------");
         }
     }
 }

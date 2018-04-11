@@ -38,7 +38,7 @@ namespace MusicMetadataUpdater_v2._0
         public string Lyrics { get; set; }
         [StringLength(100)]
         public string Title { get; set; }
-        public uint Track { get; set; }
+        public uint TrackNo { get; set; }
         public uint Year { get; set; }
         public byte Rating { get; set; }
         public long DurationInTicks { get; set; }
@@ -81,7 +81,7 @@ namespace MusicMetadataUpdater_v2._0
             Genres = GetGenresFromMetadata(TagLibFile);
             Lyrics = TagLibFile.Tag.Lyrics ?? string.Empty;
             Title = TagLibFile.Tag.Title ?? "Uknown";
-            Track = TagLibFile.Tag.Track;
+            TrackNo = TagLibFile.Tag.Track;
             Year = TagLibFile.Tag.Year;
             Rating = GetRatingFromMetadata(TagLibFile);
             DurationInTicks = TagLibFile.Properties.Duration.Ticks;
@@ -117,15 +117,15 @@ namespace MusicMetadataUpdater_v2._0
             return rating;
         }
 
-        public void UpdateMetadataWithAPIResult(RESPONSE gracenoteAPIResult)
+        public void UpdateMetadataWithAPIResult(GracenoteAPIResponse gracenoteResponse)
         {
             // Re-add sanitization
-            Artist = gracenoteAPIResult.ALBUM.ARTIST;
-            Album = gracenoteAPIResult.ALBUM.TITLE;
-            Title = gracenoteAPIResult.ALBUM.TRACK.TITLE;
-            Track = Convert.ToUInt32(gracenoteAPIResult.ALBUM.TRACK.TRACK_NUM);
-            Year = Convert.ToUInt32(gracenoteAPIResult.ALBUM.DATE);
-            Genres = gracenoteAPIResult.ALBUM.GENRE;
+            Artist = gracenoteResponse.Artist;
+            Album = gracenoteResponse.Album;
+            Title = gracenoteResponse.Title;
+            TrackNo = Convert.ToUInt32(gracenoteResponse.TrackNo);
+            Year = Convert.ToUInt32(gracenoteResponse.Year);
+            Genres = gracenoteResponse.Genre;
         }
 
         public bool TrySave()
@@ -152,7 +152,7 @@ namespace MusicMetadataUpdater_v2._0
             TagLibFile.Tag.Album = Album;
             TagLibFile.Tag.Genres = Genres.Split(',');
             TagLibFile.Tag.Title = Title;
-            TagLibFile.Tag.Track = Track;
+            TagLibFile.Tag.Track = TrackNo;
             TagLibFile.Tag.Year = Year;
         }
 
@@ -171,7 +171,7 @@ namespace MusicMetadataUpdater_v2._0
             var metadataFile = file as MetadataFile;
             if (Artist != metadataFile.Artist ||
                 Album != metadataFile.Album ||
-                Track != metadataFile.Track ||
+                TrackNo != metadataFile.TrackNo ||
                 BitRate != metadataFile.BitRate ||
                 DurationInTicks != metadataFile.DurationInTicks)
                 isEqual = false;

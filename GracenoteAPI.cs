@@ -7,17 +7,17 @@ namespace MusicMetadataUpdater_v2._0
 {
     public static class GracenoteAPI
     {
-        public static RESPONSE Query(MetadataFile metadataFile, bool includeAlbumInQuery = true)
+        internal static GracenoteAPIResponse Query(MetadataFile metadataFile, bool includeAlbumInQuery = true)
         {
             var xmlToPost = XmlGenerator.CreateXmlToPost(metadataFile, includeAlbumInQuery);
             var result = PostXmlData(xmlToPost);
             if (string.IsNullOrEmpty(result))
             {
-                LogWriter.Write($"GracenoteAPI.Query() - Received a null result from the PostXMLData() method. " +
+                LogWriter.Write($"GracenoteAPI.Query() - Received a null result from the PostXmlData() method. " +
                     $"ArgumentNullException: Application terminated.");
                 throw new ArgumentNullException(nameof(result));
             }
-            return XmlParser.XmlToRESPONSEObject(result);
+            return XmlParser.ParseXml(result);
         }
 
         private static string PostXmlData(string xmlToPost)

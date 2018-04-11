@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Security.AccessControl;
+using System.Security.Principal;
 
 namespace MusicMetadataUpdater_v2._0
 {
@@ -39,22 +41,41 @@ namespace MusicMetadataUpdater_v2._0
         {
             try
             {
-                DeleteEmptySubdirectories(folder);
-                if (!HasFiles(folder) && !FilesExistInSubdirectories(folder))
+                if (HasAccessToFolder(folder.FullName))
                 {
-                    Directory.Delete(folder.FullName);
-                    if (!HasFiles(folder.Parent) && !FilesExistInSubdirectories(folder.Parent))
-                        folder.Parent.Delete();
+                    DeleteEmptySubdirectories(folder);
+                    if (!HasFiles(folder) && !FilesExistInSubdirectories(folder))
+                    {
+                        Directory.Delete(folder.FullName);
+                        if (!HasFiles(folder.Parent) && !FilesExistInSubdirectories(folder.Parent))
+                            folder.Parent.Delete();
+                    }
                 }
             }
-            catch (IOException)
+            catch (IOException ex)
             {
-
+                LogWriter.Write($"FileManipulator.DeleteEmptyFoldres(): Cannot delete {folder}. {ex.GetType()}: \"{ex.Message}\"");
             }
-            catch (UnauthorizedAccessException)
-            {
+        }
 
-            }          
+        private static bool HasAccessToFolder(string folderPath)
+        {
+            bool hasAccess = false;
+            WindowsIdentity identity = WindowsIdentity.GetCurrent();
+            DirectorySecurity directorysecurity = Directory.GetAccessControl(folderPath);
+            var rules = directorysecurity.GetAccessRules(true, true, typeof(SecurityIdentifier));
+            foreach (FileSystemAccessRule rule in rules)
+            {
+                if (identity.Groups.Contains(rule.IdentityReference))
+                {
+                    if ((FileSystemRights.Modify & rule.FileSystemRights) == FileSystemRights.Modify)
+                    {
+                        if (rule.AccessControlType == AccessControlType.Allow)
+                            hasAccess = true;
+                    }
+                }
+            }
+            return hasAccess;
         }
 
         private static void DeleteEmptySubdirectories(DirectoryInfo folder)

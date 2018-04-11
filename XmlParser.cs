@@ -1,18 +1,36 @@
-﻿using System.Collections.Generic;
-using System.IO;
-using System.Xml.Serialization;
+﻿using System;
+using System.Xml.Linq;
 
 namespace MusicMetadataUpdater_v2._0
 {
     internal static class XmlParser
     {
-        internal static RESPONSE XmlToRESPONSEObject(string xml)
+        internal static GracenoteAPIResponse ParseXml(string xml)
         {
-            var serializer = new XmlSerializer(typeof(List<RESPONSE>), new XmlRootAttribute("RESPONSES"));
-            using (var stringReader = new StringReader(xml))
+            try
             {
-                var results = (List<RESPONSE>)serializer.Deserialize(stringReader);
-                return results[0];
+                var response = XDocument.Parse(xml).Root.Element("RESPONSE").Element("ALBUM");
+                var artist = response.Element("ARTIST").Value;
+                var album = response.Element("TITLE").Value;
+                var title = response.Element("TRACK").Element("TITLE").Value;
+                var year = Convert.ToUInt32(response.Element("DATE").Value);
+                var genre = response.Element("GENRE").Value;
+                var track = Convert.ToUInt32(response.Element("TRACK").Element("TRACK_NUM").Value);
+
+                return new GracenoteAPIResponse()
+                {
+                    Artist = artist,
+                    Album = album,
+                    Title = title,
+                    Year = year,
+                    Genre = genre,
+                    TrackNo = track
+                };
+            }
+            catch (Exception ex)
+            {
+                LogWriter.Write($"XmlParse.ParseXml() Could not parse the GracenoteAPI XML response. {ex.GetType()}: \"{ex.Message}\"");
+                throw;
             }
         }
     }
