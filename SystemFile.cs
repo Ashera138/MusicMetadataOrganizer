@@ -1,6 +1,5 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.IO;
 using System.Text.RegularExpressions;
 
@@ -8,12 +7,10 @@ namespace MusicMetadataUpdater_v2._0
 {
     public class SystemFile : IFile
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        [ForeignKey("MetadataFile")]
-        public int FileId { get; set; }
-        public MetadataFile MetadataFile { get; set; }
+        public int SystemFileId { get; set; }
+        public virtual MetadataFile MetadataFile { get; set; }
         private string _filepath;
+        [StringLength(260)]
         public string Filepath
         {
             get
@@ -22,7 +19,7 @@ namespace MusicMetadataUpdater_v2._0
             }
             set
             {
-                if (!System.IO.File.Exists(value))
+                if (!File.Exists(value))
                     throw new IOException();
                 _filepath = value;
             }
@@ -36,14 +33,15 @@ namespace MusicMetadataUpdater_v2._0
         public DateTime CreationTime { get; set; }
         public DateTime LastAccessTime { get; set; }
         public long LengthInBytes { get; set; }
-        private FileInfo SysIOFile { get; set; }
 
+        private FileInfo SysIOFile { get; set; }
+        
         private SystemFile()
         {
             SysIOFile = new FileInfo(Filepath);
             PopulateFields();
         }
-
+        
         public SystemFile(string filepath)
         {
             this.Filepath = filepath;
@@ -60,6 +58,7 @@ namespace MusicMetadataUpdater_v2._0
             CreationTime = Convert.ToDateTime(SysIOFile.CreationTime);
             LastAccessTime = Convert.ToDateTime(SysIOFile.LastAccessTime);
             LengthInBytes = SysIOFile.Length;
+            MetadataFile = new MetadataFile(Filepath);
         }
 
         public bool TrySave()
@@ -213,6 +212,11 @@ namespace MusicMetadataUpdater_v2._0
             var tempPath = currentFile.FullName.Replace(currentFile.Name, @"_temp");
             currentFile.MoveTo(tempPath);
             this.Filepath = tempPath;
+        }
+
+        public override string ToString()
+        {
+            return $"{MetadataFile.Artist} - {MetadataFile.Title}";
         }
     }
 }

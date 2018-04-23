@@ -6,90 +6,50 @@ using System.Windows.Forms;
 
 namespace MusicMetadataUpdater_v2._0
 {
-    // TO:DO - Refactor all of this class
     public static class FileSearcher
     {
-        [STAThread]
-        public static List<SystemFile> ExtractFiles()
+        private static List<SystemFile> _files = new List<SystemFile>(); 
+
+        public static List<SystemFile> ExtractFiles(string directory)
         {
-            var directory = SelectDirectory();
-            return ExtractFiles(directory);
+            _files.Clear();
+            ExtractFilesRecursively(directory);
+            return _files;
         }
 
-        private static string SelectDirectory()
+        public static string SelectDirectory()
         {
             var directory = string.Empty;
-
             var folderBrowser = new FolderBrowserDialog
-            {
-                SelectedPath = @"Z:\Music"
-            };
+                { SelectedPath = @"Z:\Music" };
 
             if (folderBrowser.ShowDialog() == DialogResult.OK)
                 directory = folderBrowser.SelectedPath;
-            else
-            {
-                Environment.Exit(1);
-                Application.Exit();
-            }
-
             return directory;
         }
 
-        // Fix this nightmare
-        // Make unit tests
-        private static List<SystemFile> ExtractFiles(string directory)
-        {
-            var files = new List<SystemFile>();
-            var filesInFolder = Directory.EnumerateFiles(directory, "", SearchOption.AllDirectories);
-
-            foreach (var path in filesInFolder)
-            {
-                if (IsMediaFile(path))
-                    files.Add(new SystemFile(path));
-            }
-
-            foreach (var subdirectory in Directory.EnumerateDirectories(directory))
-            {
-                ExtractFiles(subdirectory);
-            }
-            return files;
-        }
-
-        /*
-        private static void ExtractFiles(string directory)
+        private static void ExtractFilesRecursively(string directory)
         {
             var filesInFolder = Directory.EnumerateFiles(directory, "", SearchOption.AllDirectories);
 
             foreach (var path in Directory.EnumerateFiles(directory))
             {
-                if (IsMediaFile(path))
-                    files.Add(MasterFile.GetMasterFileFromFilepath(path));
+                if (IsSupportedMediaFile(path))
+                    _files.Add(new SystemFile(path));
             }
 
             foreach (var subdirectory in Directory.EnumerateDirectories(directory))
             {
-                ExtractFiles(subdirectory);
-            }
-        }
-        */
-
-        [Obsolete("Not being used anywhere in v1.0. Double check for deletion or possibly use instead.")]
-        internal static IEnumerable<SystemFile> ExtractFilesFromFolder(string directory)
-        {
-            foreach (var path in Directory.EnumerateFiles(directory))
-            {
-                if (IsMediaFile(path))
-                    yield return new SystemFile(path);
+                ExtractFilesRecursively(subdirectory);
             }
         }
 
-        private static bool IsMediaFile(string path)
+        private static bool IsSupportedMediaFile(string path)
         {
-            return mediaExtensions.Contains(Path.GetExtension(path), StringComparer.OrdinalIgnoreCase);
+            return supportedMediaExtensions.Contains(Path.GetExtension(path), StringComparer.OrdinalIgnoreCase);
         }
 
-        private static string[] mediaExtensions =
+        private static string[] supportedMediaExtensions =
         {
             ".AAC", ".AIFF", ".APE", ".ASF", ".AA", ".AAX", ".FLAC", ".MKA", ".M4A", ".MP3",
             ".MPC", ".OGG", ".RIFF", ".WV"

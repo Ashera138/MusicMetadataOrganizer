@@ -7,15 +7,16 @@ namespace MusicMetadataUpdater_v2._0
     {
         internal static GracenoteAPIResponse ParseXml(string xml)
         {
+            // Might need to changed from escaped XML to the normal chars
             try
             {
                 var response = XDocument.Parse(xml).Root.Element("RESPONSE").Element("ALBUM");
                 var artist = response.Element("ARTIST").Value;
                 var album = response.Element("TITLE").Value;
                 var title = response.Element("TRACK").Element("TITLE").Value;
-                var year = Convert.ToUInt32(response.Element("DATE").Value);
+                var year = response.Element("DATE").ElementValueNull();
                 var genre = response.Element("GENRE").Value;
-                var track = Convert.ToUInt32(response.Element("TRACK").Element("TRACK_NUM").Value);
+                var track = Convert.ToInt64(response.Element("TRACK").Element("TRACK_NUM").Value);
 
                 return new GracenoteAPIResponse()
                 {
@@ -23,13 +24,14 @@ namespace MusicMetadataUpdater_v2._0
                     Album = album,
                     Title = title,
                     Year = year,
-                    Genre = genre,
+                    Genres = genre,
                     TrackNo = track
                 };
             }
             catch (Exception ex)
             {
-                LogWriter.Write($"XmlParse.ParseXml() Could not parse the GracenoteAPI XML response. {ex.GetType()}: \"{ex.Message}\"");
+                LogWriter.Write($"XmlParse.ParseXml() Could not parse the GracenoteAPI XML response. {ex.GetType()}: " +
+                    $"\"{ex.Message}\" \n XML that threw the exception: {xml}");
                 throw;
             }
         }

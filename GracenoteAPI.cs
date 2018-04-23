@@ -2,12 +2,18 @@
 using System.IO;
 using System.Net;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace MusicMetadataUpdater_v2._0
 {
     public static class GracenoteAPI
     {
-        internal static GracenoteAPIResponse Query(MetadataFile metadataFile, bool includeAlbumInQuery = true)
+        public async static Task<GracenoteAPIResponse> QueryAsync(MetadataFile metadataFile, bool includeAlbumInQuery = true)
+        {
+            return await Task.Run(() => Query(metadataFile, includeAlbumInQuery));
+        }
+
+        public static GracenoteAPIResponse Query(MetadataFile metadataFile, bool includeAlbumInQuery = true)
         {
             var xmlToPost = XmlGenerator.CreateXmlToPost(metadataFile, includeAlbumInQuery);
             var result = PostXmlData(xmlToPost);
