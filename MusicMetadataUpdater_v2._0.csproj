@@ -79,6 +79,7 @@
   <ItemGroup>
     <Compile Include="FileSearcher.cs" />
     <Compile Include="GracenoteAPIResponse.cs" />
+    <Compile Include="MetadataUpdate.cs" />
     <Compile Include="SensitiveDataReader.cs" />
     <Compile Include="FileManipulator.cs" />
     <Compile Include="GracenoteAPI.cs" />

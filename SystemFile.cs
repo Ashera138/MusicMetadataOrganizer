@@ -9,6 +9,7 @@ namespace MusicMetadataUpdater_v2._0
     {
         public int SystemFileId { get; set; }
         public virtual MetadataFile MetadataFile { get; set; }
+
         private string _filepath;
         [StringLength(260)]
         public string Filepath
@@ -24,14 +25,20 @@ namespace MusicMetadataUpdater_v2._0
                 _filepath = value;
             }
         }
+
         [StringLength(100)]
         public string Name { get; set; }
+
         [StringLength(260)]
         public string Directory { get; set; }
+
         [StringLength(10)]
         public string Extension { get; set; }
+
         public DateTime CreationTime { get; set; }
+
         public DateTime LastAccessTime { get; set; }
+
         public long LengthInBytes { get; set; }
 
         private FileInfo SysIOFile { get; set; }
@@ -82,10 +89,10 @@ namespace MusicMetadataUpdater_v2._0
             return success;
         }
 
-        public bool Equals(IFile file)
+        public bool Equals(IFile otherFile)
         {
             bool isEqual = true;
-            var systemFile = file as SystemFile;
+            var systemFile = otherFile as SystemFile;
             if (Name != systemFile.Name ||
                 Directory != systemFile.Directory ||
                 Extension != systemFile.Extension ||

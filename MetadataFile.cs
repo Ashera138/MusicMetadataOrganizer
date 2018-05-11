@@ -1,16 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.IO;
+using System.Runtime.CompilerServices;
 
 namespace MusicMetadataUpdater_v2._0
 {
-    public class MetadataFile : IFile
+    public class MetadataFile : IFile, INotifyPropertyChanged
     {
         [ForeignKey("SystemFile")]
         public int MetadataFileId { get; set; }
         public virtual SystemFile SystemFile { get; set; }
+
         private string _filepath;
         [StringLength(260)]
         public string Filepath
@@ -22,38 +26,117 @@ namespace MusicMetadataUpdater_v2._0
             set
             {
                 if (!File.Exists(value))
-                    throw new IOException();
+                    throw new FileNotFoundException();
                 _filepath = value;
+                RaisePropertyChanged();
             }
         }
+
         public int BitRate { get; set; }
+
         [Required]
         [StringLength(40)]
         public string MediaType { get; set; }
+
+        private string _artist;
         [StringLength(100)]
-        public string Artist { get; set; }
+        public string Artist
+        {
+            get { return _artist; }
+            set
+            {
+                _artist = value;
+                RaisePropertyChanged();
+            }
+        }
+
+        private string _album;
         [StringLength(100)]
-        public string Album { get; set; }
+        public string Album
+        {
+            get { return _album; }
+            set
+            {
+                _album = value;
+                RaisePropertyChanged();
+            }
+        }
+
+        private string _title;
+        [StringLength(100)]
+        public string Title
+        {
+            get { return _title; }
+            set
+            {
+                _title = value;
+                RaisePropertyChanged();
+            }
+        }
+
+        private string _genres;
         [StringLength(1024)]
-        public string Genres { get; set; }
-        // 4000 is maximum. 8000 gets converted to nvarchar(MAX)
-        [StringLength(8000)]
+        public string Genres
+        {
+            get { return _genres; }
+            set
+            {
+                _genres = value;
+                RaisePropertyChanged();
+            }
+        }
+
         public string Lyrics { get; set; }
-        [StringLength(100)]
-        public string Title { get; set; }
-        public long TrackNo { get; set; }
-        public long Year { get; set; }
-        public byte Rating { get; set; }
+
+        private long? _trackNo;
+        public long? TrackNo
+        {
+            get { return _trackNo; }
+            set
+            {
+                _trackNo = value;
+                RaisePropertyChanged();
+            }
+        }
+
+        private long? _year;
+        public long? Year
+        {
+            get { return _year; }
+            set
+            {
+                _year = value;
+                RaisePropertyChanged();
+            }
+        }
+
+        public byte? Rating { get; set; }
+
         public long DurationInTicks { get; set; }
 
         [NotMapped]
         public bool CheckForUpdates { get; set; }
+
         [NotMapped]
         public GracenoteAPIResponse Response { get; set; }
+
         [NotMapped]
+        [Obsolete("Going to be using the List<MetadataUpdate> instead")]
         public Dictionary<string, string> fieldsToBeUpdated = new Dictionary<string, string>();
 
+        [NotMapped]
+        public ObservableCollection<MetadataUpdate> Updates = new ObservableCollection<MetadataUpdate>();
+
+        public event PropertyChangedEventHandler PropertyChanged = delegate { };
+
         private TagLib.File TagLibFile { get; set; }
+
+        // test field
+        [NotMapped]
+        public string Name
+        {
+            get { return $"{Artist} - {Title}"; }
+        }
 
         private MetadataFile()
         {
@@ -175,10 +258,11 @@ namespace MusicMetadataUpdater_v2._0
             TagLibFile.Tag.Performers = new string[] { Artist };
         }
 
-        public bool Equals(IFile file)
+        // TODO: Revisit which fields to include in equality check
+        public bool Equals(IFile otherFile)
         {
             bool isEqual = true;
-            var metadataFile = file as MetadataFile;
+            var metadataFile = otherFile as MetadataFile;
             if (Artist != metadataFile.Artist ||
                 Album != metadataFile.Album ||
                 TrackNo != metadataFile.TrackNo ||
@@ -188,41 +272,50 @@ namespace MusicMetadataUpdater_v2._0
             return isEqual;
         }
 
-        // Refactor
         public bool IsUpdateNeeded()
         {
             bool updateNeeded = false;
+            if (Response.Artist != Artist ||
+                    Response.Album != Album || 
+                    Response.Title != Title || 
+                    Response.Year != Year ||
+                    Response.Genres != Genres || 
+                    Response.TrackNo != TrackNo)
+                updateNeeded = true;
+            return updateNeeded;
+        }
+
+        public void PopulateUpdateList()
+        {
             if (Response.Artist != Artist)
             {
-                fieldsToBeUpdated.Add("Artist", Response.Artist);
-                updateNeeded = true;
+                Updates.Add(new MetadataUpdate(MetadataFileId, "Artist", Artist, Response.Artist));
             }
             if (Response.Album != Album)
             {
-                fieldsToBeUpdated.Add("Album", Response.Album);
-                updateNeeded = true;
+                Updates.Add(new MetadataUpdate(MetadataFileId, "Album", Album, Response.Album));
             }
             if (Response.Title != Title)
             {
-                fieldsToBeUpdated.Add("Title", Response.Title);
-                updateNeeded = true;
+                Updates.Add(new MetadataUpdate(MetadataFileId, "Title", Title, Response.Title));
             }
             if (Response.Year != Year)
             {
-                fieldsToBeUpdated.Add("Year", Response.Year.ToString());
-                updateNeeded = true;
+                Updates.Add(new MetadataUpdate(MetadataFileId, "Year", Year.ToString(), Response.Year.ToString()));
             }
             if (Response.Genres != Genres)
             {
-                fieldsToBeUpdated.Add("Genres", Response.Genres);
-                updateNeeded = true;
+                Updates.Add(new MetadataUpdate(MetadataFileId, "Genres", Genres, Response.Genres));
             }
             if (Response.TrackNo != TrackNo)
             {
-                fieldsToBeUpdated.Add("TrackNo", Response.TrackNo.ToString());
-                updateNeeded = true;
+                Updates.Add(new MetadataUpdate(MetadataFileId, "TrackNo", TrackNo.ToString(), Response.TrackNo.ToString()));
             }
-            return updateNeeded;
+        }
+
+        private void RaisePropertyChanged([CallerMemberName] string caller = "")
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(caller));
         }
 
         public override string ToString()

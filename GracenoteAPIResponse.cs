@@ -5,8 +5,8 @@
         public string Artist { get; set; }
         public string Album { get; set; }
         public string Title { get; set; }
-        public long Year { get; set; }
+        public long? Year { get; set; }
         public string Genres { get; set; }
-        public long TrackNo { get; set; }
+        public long? TrackNo { get; set; }
     }
 }
