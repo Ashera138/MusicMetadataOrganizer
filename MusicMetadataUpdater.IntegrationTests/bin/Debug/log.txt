@@ -1,0 +1,507 @@
+
+Log Entry : 8:00:13 PM Monday, May 14, 2018
+  :
+  :XmlParse.ParseXml() Could not parse the GracenoteAPI XML response. System.NullReferenceException: "Object reference not set to an instance of an object." 
+ XML that threw the exception: <RESPONSES>
+ <MESSAGE>QUERY missing search strings</MESSAGE>
+ <ERROR RETRY="N">4000</ERROR>
+ <RESPONSE STATUS="ERROR">
+ </RESPONSE>
+                                                                                
+</RESPONSES>
+
+-------------------------------
+
+Log Entry : 8:45:13 PM Monday, May 14, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.InvalidOperationException: "No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information."
+-------------------------------
+
+Log Entry : 8:45:13 PM Monday, May 14, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.InvalidOperationException: "No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information."
+-------------------------------
+
+Log Entry : 8:45:13 PM Monday, May 14, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.InvalidOperationException: "No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information."
+-------------------------------
+
+Log Entry : 8:45:13 PM Monday, May 14, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.InvalidOperationException: "No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information."
+-------------------------------
+
+Log Entry : 8:45:13 PM Monday, May 14, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.InvalidOperationException: "No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information."
+-------------------------------
+
+Log Entry : 8:45:13 PM Monday, May 14, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.InvalidOperationException: "No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information."
+-------------------------------
+
+Log Entry : 8:45:14 PM Monday, May 14, 2018
+  :
+  :XmlParse.ParseXml() Could not parse the GracenoteAPI XML response. System.NullReferenceException: "Object reference not set to an instance of an object." 
+ XML that threw the exception: <RESPONSES>
+ <MESSAGE>QUERY missing search strings</MESSAGE>
+ <ERROR RETRY="N">4000</ERROR>
+ <RESPONSE STATUS="ERROR">
+ </RESPONSE>
+                                                                                
+</RESPONSES>
+
+-------------------------------
+
+Log Entry : 11:19:54 AM Monday, May 21, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.InvalidOperationException: "No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information."
+-------------------------------
+
+Log Entry : 11:19:54 AM Monday, May 21, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.InvalidOperationException: "No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information."
+-------------------------------
+
+Log Entry : 11:19:54 AM Monday, May 21, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.InvalidOperationException: "No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information."
+-------------------------------
+
+Log Entry : 11:19:56 AM Monday, May 21, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.InvalidOperationException: "No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information."
+-------------------------------
+
+Log Entry : 11:19:56 AM Monday, May 21, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.InvalidOperationException: "No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information."
+-------------------------------
+
+Log Entry : 11:19:56 AM Monday, May 21, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.InvalidOperationException: "No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information."
+-------------------------------
+
+Log Entry : 11:19:56 AM Monday, May 21, 2018
+  :
+  :XmlParse.ParseXml() Could not parse the GracenoteAPI XML response. System.NullReferenceException: "Object reference not set to an instance of an object." 
+ XML that threw the exception: <RESPONSES>
+ <MESSAGE>QUERY missing search strings</MESSAGE>
+ <ERROR RETRY="N">4000</ERROR>
+ <RESPONSE STATUS="ERROR">
+ </RESPONSE>
+                                                                                
+</RESPONSES>
+
+-------------------------------
+
+Log Entry : 1:00:17 PM Monday, May 21, 2018
+  :
+  :FileManipulator.RenameFolder - Can not rename (move) 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper' to 'C:\_TempForTesting\THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX PATH CHAR CONDITIONS\We Don't Need to Whisper'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 1:00:17 PM Monday, May 21, 2018
+  :
+  :FileManipulator.RenameFolder - Can not rename (move) 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper' to 'C:\_TempForTesting\Angels and Airwaves\THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX PATH CHAR CONDITIONS'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 1:00:17 PM Monday, May 21, 2018
+  :
+  :FileManipulator.RenameFile() - Can not rename (move) 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper\The Adventure.mp3' to 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper\THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX PATH CHAR CONDITIONS.mp3'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 1:00:17 PM Monday, May 21, 2018
+  :
+  :Test entry from LW_Write_Test_LogExistsAfterWriting() unit test.
+-------------------------------
+
+Log Entry : 1:00:17 PM Monday, May 21, 2018
+  :
+  :Test entry from LW_Write_Test_EntryExistsInLogFile() unit test. Current time: 1:00:17 PM
+-------------------------------
+
+Log Entry : 1:00:17 PM Monday, May 21, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.InvalidOperationException: "No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information."
+-------------------------------
+
+Log Entry : 1:00:17 PM Monday, May 21, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.InvalidOperationException: "No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information."
+-------------------------------
+
+Log Entry : 1:00:17 PM Monday, May 21, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.InvalidOperationException: "No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information."
+-------------------------------
+
+Log Entry : 1:00:17 PM Monday, May 21, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.InvalidOperationException: "No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information."
+-------------------------------
+
+Log Entry : 1:00:17 PM Monday, May 21, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.InvalidOperationException: "No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information."
+-------------------------------
+
+Log Entry : 1:00:17 PM Monday, May 21, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.InvalidOperationException: "No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information."
+-------------------------------
+
+Log Entry : 1:00:19 PM Monday, May 21, 2018
+  :
+  :XmlParse.ParseXml() Could not parse the GracenoteAPI XML response. System.NullReferenceException: "Object reference not set to an instance of an object." 
+ XML that threw the exception: <RESPONSES>
+ <MESSAGE>QUERY missing search strings</MESSAGE>
+ <ERROR RETRY="N">4000</ERROR>
+ <RESPONSE STATUS="ERROR">
+ </RESPONSE>
+                                                                                
+</RESPONSES>
+
+-------------------------------
+
+Log Entry : 4:06:33 PM Wednesday, May 23, 2018
+  :
+  :FileManipulator.RenameFolder - Can not rename (move) 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper' to 'C:\_TempForTesting\THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX PATH CHAR CONDITIONS\We Don't Need to Whisper'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 4:06:33 PM Wednesday, May 23, 2018
+  :
+  :FileManipulator.RenameFolder - Can not rename (move) 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper' to 'C:\_TempForTesting\Angels and Airwaves\THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX PATH CHAR CONDITIONS'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 4:06:33 PM Wednesday, May 23, 2018
+  :
+  :FileManipulator.RenameFile() - Can not rename (move) 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper\The Adventure.mp3' to 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper\THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX PATH CHAR CONDITIONS.mp3'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 4:06:33 PM Wednesday, May 23, 2018
+  :
+  :Test entry from LW_Write_Test_LogExistsAfterWriting() unit test.
+-------------------------------
+
+Log Entry : 4:06:33 PM Wednesday, May 23, 2018
+  :
+  :Test entry from LW_Write_Test_EntryExistsInLogFile() unit test. Current time: 4:06:33 PM
+-------------------------------
+
+Log Entry : 4:06:34 PM Wednesday, May 23, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.InvalidOperationException: "No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information."
+-------------------------------
+
+Log Entry : 4:06:34 PM Wednesday, May 23, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.InvalidOperationException: "No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information."
+-------------------------------
+
+Log Entry : 4:06:34 PM Wednesday, May 23, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.InvalidOperationException: "No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information."
+-------------------------------
+
+Log Entry : 4:06:34 PM Wednesday, May 23, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.InvalidOperationException: "No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information."
+-------------------------------
+
+Log Entry : 4:06:34 PM Wednesday, May 23, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.InvalidOperationException: "No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information."
+-------------------------------
+
+Log Entry : 4:06:34 PM Wednesday, May 23, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.InvalidOperationException: "No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information."
+-------------------------------
+
+Log Entry : 4:06:36 PM Wednesday, May 23, 2018
+  :
+  :XmlParse.ParseXml() Could not parse the GracenoteAPI XML response. System.NullReferenceException: "Object reference not set to an instance of an object." 
+ XML that threw the exception: <RESPONSES>
+ <MESSAGE>QUERY missing search strings</MESSAGE>
+ <ERROR RETRY="N">4000</ERROR>
+ <RESPONSE STATUS="ERROR">
+ </RESPONSE>
+                                                                                
+</RESPONSES>
+
+-------------------------------
+
+Log Entry : 4:33:13 PM Wednesday, May 23, 2018
+  :
+  :FileManipulator.RenameFolder - Can not rename (move) 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper' to 'C:\_TempForTesting\THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX PATH CHAR CONDITIONS\We Don't Need to Whisper'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 4:33:13 PM Wednesday, May 23, 2018
+  :
+  :FileManipulator.RenameFolder - Can not rename (move) 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper' to 'C:\_TempForTesting\Angels and Airwaves\THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX PATH CHAR CONDITIONS'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 4:33:13 PM Wednesday, May 23, 2018
+  :
+  :FileManipulator.RenameFile() - Can not rename (move) 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper\The Adventure.mp3' to 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper\THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX PATH CHAR CONDITIONS.mp3'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 4:33:13 PM Wednesday, May 23, 2018
+  :
+  :Test entry from LW_Write_Test_LogExistsAfterWriting() unit test.
+-------------------------------
+
+Log Entry : 4:33:13 PM Wednesday, May 23, 2018
+  :
+  :Test entry from LW_Write_Test_EntryExistsInLogFile() unit test. Current time: 4:33:13 PM
+-------------------------------
+
+Log Entry : 4:33:13 PM Wednesday, May 23, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.InvalidOperationException: "No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information."
+-------------------------------
+
+Log Entry : 4:33:13 PM Wednesday, May 23, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.InvalidOperationException: "No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information."
+-------------------------------
+
+Log Entry : 4:33:14 PM Wednesday, May 23, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.InvalidOperationException: "No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information."
+-------------------------------
+
+Log Entry : 4:33:14 PM Wednesday, May 23, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.InvalidOperationException: "No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information."
+-------------------------------
+
+Log Entry : 4:33:14 PM Wednesday, May 23, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.InvalidOperationException: "No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information."
+-------------------------------
+
+Log Entry : 4:33:14 PM Wednesday, May 23, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.InvalidOperationException: "No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information."
+-------------------------------
+
+Log Entry : 4:33:14 PM Wednesday, May 23, 2018
+  :
+  :XmlParse.ParseXml() Could not parse the GracenoteAPI XML response. System.NullReferenceException: "Object reference not set to an instance of an object." 
+ XML that threw the exception: <RESPONSES>
+ <MESSAGE>QUERY missing search strings</MESSAGE>
+ <ERROR RETRY="N">4000</ERROR>
+ <RESPONSE STATUS="ERROR">
+ </RESPONSE>
+                                                                                
+</RESPONSES>
+
+-------------------------------
+
+Log Entry : 4:53:03 PM Wednesday, May 23, 2018
+  :
+  :FileManipulator.RenameFolder - Can not rename (move) 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper' to 'C:\_TempForTesting\THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX PATH CHAR CONDITIONS\We Don't Need to Whisper'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 4:53:03 PM Wednesday, May 23, 2018
+  :
+  :FileManipulator.RenameFolder - Can not rename (move) 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper' to 'C:\_TempForTesting\Angels and Airwaves\THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX PATH CHAR CONDITIONS'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 4:53:03 PM Wednesday, May 23, 2018
+  :
+  :FileManipulator.RenameFile() - Can not rename (move) 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper\The Adventure.mp3' to 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper\THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX PATH CHAR CONDITIONS.mp3'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 4:53:03 PM Wednesday, May 23, 2018
+  :
+  :Test entry from LW_Write_Test_LogExistsAfterWriting() unit test.
+-------------------------------
+
+Log Entry : 4:53:03 PM Wednesday, May 23, 2018
+  :
+  :Test entry from LW_Write_Test_EntryExistsInLogFile() unit test. Current time: 4:53:03 PM
+-------------------------------
+
+Log Entry : 4:53:04 PM Wednesday, May 23, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.InvalidOperationException: "No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information."
+-------------------------------
+
+Log Entry : 4:53:04 PM Wednesday, May 23, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.InvalidOperationException: "No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information."
+-------------------------------
+
+Log Entry : 4:53:04 PM Wednesday, May 23, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.InvalidOperationException: "No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information."
+-------------------------------
+
+Log Entry : 4:53:04 PM Wednesday, May 23, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.InvalidOperationException: "No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information."
+-------------------------------
+
+Log Entry : 4:53:04 PM Wednesday, May 23, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.InvalidOperationException: "No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information."
+-------------------------------
+
+Log Entry : 4:53:04 PM Wednesday, May 23, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.InvalidOperationException: "No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information."
+-------------------------------
+
+Log Entry : 4:53:05 PM Wednesday, May 23, 2018
+  :
+  :XmlParse.ParseXml() Could not parse the GracenoteAPI XML response. System.NullReferenceException: "Object reference not set to an instance of an object." 
+ XML that threw the exception: <RESPONSES>
+ <MESSAGE>QUERY missing search strings</MESSAGE>
+ <ERROR RETRY="N">4000</ERROR>
+ <RESPONSE STATUS="ERROR">
+ </RESPONSE>
+                                                                                
+</RESPONSES>
+
+-------------------------------
+
+Log Entry : 4:54:17 PM Wednesday, May 23, 2018
+  :
+  :FileManipulator.RenameFolder - Can not rename (move) 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper' to 'C:\_TempForTesting\THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX PATH CHAR CONDITIONS\We Don't Need to Whisper'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 4:54:17 PM Wednesday, May 23, 2018
+  :
+  :FileManipulator.RenameFolder - Can not rename (move) 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper' to 'C:\_TempForTesting\Angels and Airwaves\THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX PATH CHAR CONDITIONS'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 4:54:17 PM Wednesday, May 23, 2018
+  :
+  :FileManipulator.RenameFile() - Can not rename (move) 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper\The Adventure.mp3' to 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper\THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX PATH CHAR CONDITIONS.mp3'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 4:54:17 PM Wednesday, May 23, 2018
+  :
+  :Test entry from LW_Write_Test_LogExistsAfterWriting() unit test.
+-------------------------------
+
+Log Entry : 4:54:17 PM Wednesday, May 23, 2018
+  :
+  :Test entry from LW_Write_Test_EntryExistsInLogFile() unit test. Current time: 4:54:17 PM
+-------------------------------
+
+Log Entry : 4:54:18 PM Wednesday, May 23, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.InvalidOperationException: "No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information."
+-------------------------------
+
+Log Entry : 4:54:18 PM Wednesday, May 23, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.InvalidOperationException: "No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information."
+-------------------------------
+
+Log Entry : 4:54:18 PM Wednesday, May 23, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.InvalidOperationException: "No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information."
+-------------------------------
+
+Log Entry : 4:54:18 PM Wednesday, May 23, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.InvalidOperationException: "No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information."
+-------------------------------
+
+Log Entry : 4:54:18 PM Wednesday, May 23, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.InvalidOperationException: "No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information."
+-------------------------------
+
+Log Entry : 4:54:18 PM Wednesday, May 23, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.InvalidOperationException: "No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information."
+-------------------------------
+
+Log Entry : 4:54:19 PM Wednesday, May 23, 2018
+  :
+  :XmlParse.ParseXml() Could not parse the GracenoteAPI XML response. System.NullReferenceException: "Object reference not set to an instance of an object." 
+ XML that threw the exception: <RESPONSES>
+ <MESSAGE>QUERY missing search strings</MESSAGE>
+ <ERROR RETRY="N">4000</ERROR>
+ <RESPONSE STATUS="ERROR">
+ </RESPONSE>
+                                                                                
+</RESPONSES>
+
+-------------------------------
+
+Log Entry : 5:20:55 PM Wednesday, May 23, 2018
+  :
+  :FileManipulator.RenameFolder - Can not rename (move) 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper' to 'C:\_TempForTesting\THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX PATH CHAR CONDITIONS\We Don't Need to Whisper'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 5:20:55 PM Wednesday, May 23, 2018
+  :
+  :FileManipulator.RenameFolder - Can not rename (move) 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper' to 'C:\_TempForTesting\Angels and Airwaves\THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX PATH CHAR CONDITIONS'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 5:20:55 PM Wednesday, May 23, 2018
+  :
+  :FileManipulator.RenameFile() - Can not rename (move) 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper\The Adventure.mp3' to 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper\THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX PATH CHAR CONDITIONS.mp3'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 5:20:55 PM Wednesday, May 23, 2018
+  :
+  :Test entry from LW_Write_Test_LogExistsAfterWriting() unit test.
+-------------------------------
+
+Log Entry : 5:20:55 PM Wednesday, May 23, 2018
+  :
+  :Test entry from LW_Write_Test_EntryExistsInLogFile() unit test. Current time: 5:20:55 PM
+-------------------------------
+
+Log Entry : 5:20:55 PM Wednesday, May 23, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.InvalidOperationException: "No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information."
+-------------------------------
+
+Log Entry : 5:20:55 PM Wednesday, May 23, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.InvalidOperationException: "No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information."
+-------------------------------
+
+Log Entry : 5:20:55 PM Wednesday, May 23, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.InvalidOperationException: "No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information."
+-------------------------------
+
+Log Entry : 5:20:55 PM Wednesday, May 23, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.InvalidOperationException: "No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information."
+-------------------------------
+
+Log Entry : 5:20:55 PM Wednesday, May 23, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.InvalidOperationException: "No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information."
+-------------------------------
+
+Log Entry : 5:20:55 PM Wednesday, May 23, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.InvalidOperationException: "No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information."
+-------------------------------
+
+Log Entry : 5:20:56 PM Wednesday, May 23, 2018
+  :
+  :XmlParse.ParseXml() Could not parse the GracenoteAPI XML response. System.NullReferenceException: "Object reference not set to an instance of an object." 
+ XML that threw the exception: <RESPONSES>
+ <MESSAGE>QUERY missing search strings</MESSAGE>
+ <ERROR RETRY="N">4000</ERROR>
+ <RESPONSE STATUS="ERROR">
+ </RESPONSE>
+                                                                                
+</RESPONSES>
+
+-------------------------------
