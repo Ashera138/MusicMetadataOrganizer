@@ -7,7 +7,7 @@ using System.Security.Principal;
 
 namespace MusicMetadataUpdater_v2._0
 {
-    internal static class FileManipulator
+    public static class FileManipulator
     {
         internal static DirectoryInfo GetDirectoryInfo(string directory)
         {
@@ -37,7 +37,7 @@ namespace MusicMetadataUpdater_v2._0
                 Directory.CreateDirectory(directory);
         }
 
-        internal static void DeleteEmptyFolders(DirectoryInfo folder)
+        public static void DeleteEmptyFolders(DirectoryInfo folder)
         {
             try
             {

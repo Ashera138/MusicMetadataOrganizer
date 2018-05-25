@@ -19,6 +19,8 @@ namespace MusicMetadataUpdater_v2._0
 
         public static string Replace(this Group group, string source, string replacement)
         {
+            AssertNonNull(replacement, "replacement");
+
             return source.Substring(0, group.Index) + replacement + source.Substring(group.Index + group.Length);
         }
 
@@ -27,6 +29,9 @@ namespace MusicMetadataUpdater_v2._0
             return element == null ? 0 : Convert.ToInt64(element.Value);
         }
 
+        // I don't know how to unit test this method
+        // No matter what mock options I try, it throws NotImplementedExceptions
+        // ((System.Linq.IQueryable)dbSet).ElementType, Expression, and Provider
         public static void Clear<T>(this DbSet<T> dbSet) where T : class
         {
             dbSet.RemoveRange(dbSet);
@@ -37,85 +42,80 @@ namespace MusicMetadataUpdater_v2._0
             return await Task.Run(() => table.ToList<T>());
         }
 
-        public static List<T> ToList<T>(this DataTable table) where T : class, new()
+        private static void AssertNonNull(this object value, string paramName)
         {
-            try
+            if (value == null)
             {
-                List<T> list = new List<T>();
+                LogWriter.Write($"DataRowCollection.ToIEnumerableOfObject<T>() Extension method - " +
+                     $"Cannot parse a null DataRowCollection object. Row object: {value}. ArgumentNullException thrown.");
 
-                foreach (var row in table.AsEnumerable())
-                {
-                    T obj = new T();
-
-                    foreach (var prop in obj.GetType().GetProperties())
-                    {
-                        try
-                        {
-                            PropertyInfo propertyInfo = obj.GetType().GetProperty(prop.Name);
-                            propertyInfo.SetValue(obj, Convert.ChangeType(row[prop.Name], propertyInfo.PropertyType), null);
-                        }
-                        catch
-                        {
-                            // Not sure if the row.ToString() prints out anything useful
-                            LogWriter.Write($"DataSet.ToList() Extension method - Could not parse a row in the DataTable to an object of the supplied type. " +
-                                $"Row object: {row}, Type supplied: {obj.GetType()}, Type property: {prop}.");
-                            continue;
-                        }
-                    }
-
-                    list.Add(obj);
-                }
-
-                return list;
-            }
-            catch
-            {
-                return null;
+                throw new ArgumentNullException("Value must not be null.", paramName);
             }
         }
 
-        public static IEnumerable<T> ToIenumerableOfObject<T>(this DataRowCollection rows) where T : new()
+        public static List<T> ToList<T>(this DataTable table) where T : class, new()
         {
-            foreach (DataRow dataRow in rows)
-            {
-                yield return dataRow.ToObject<T>();
-            }
+            AssertNonNull(table.AsEnumerable(), "table");
+
+            return table.Rows.ToList<T>();
+        }
+
+        public static List<T> ToList<T>(this DataRowCollection rows) where T : class, new()
+        {
+            AssertNonNull(rows, "rows");
+
+            return rows.Cast<DataRow>().ToList<T>();
+        }
+
+        private static List<T> ToList<T>(this IEnumerable<DataRow> rows) where T : class, new()
+        {
+            return rows.Select(r => r.ToObject<T>()).ToList();
         }
 
         public static T ToObject<T>(this DataRow row) where T : new()
         {
+            AssertNonNull(row, "row");
+
             T item = new T();
             Type typeOfT = item.GetType();
             var index = 0;
 
-            foreach (DataColumn column in row.Table.Columns)
+            try
             {
-                PropertyInfo property = typeOfT.GetProperty(column.ColumnName);
-                Type propertyType = property.PropertyType;
-                object result = null;
-
-                if (IsNullableType(propertyType))
+                foreach (DataColumn column in row.Table.Columns)
                 {
-                    var rowIndex = row.Table.Rows.IndexOf(row);
-                    var valueOfPropInfo = row.Table.Rows[rowIndex].ItemArray[index];
-                    Type underlyingType = Nullable.GetUnderlyingType(propertyType);
-                    result = (valueOfPropInfo == null || valueOfPropInfo == DBNull.Value) ? null : Convert.ChangeType(valueOfPropInfo, underlyingType);
-                }
+                    PropertyInfo property = typeOfT.GetProperty(column.ColumnName);
+                    Type propertyType = property.PropertyType;
+                    object result = null;
 
-                else
-                {
-                    result = Convert.ChangeType(row[column], propertyType);
-                }
+                    if (propertyType.IsNullableType())
+                    {
+                        var rowIndex = row.Table.Rows.IndexOf(row);
+                        var valueOfPropInfo = row.Table.Rows[rowIndex].ItemArray[index];
+                        Type underlyingType = Nullable.GetUnderlyingType(propertyType);
+                        result = (valueOfPropInfo == null || valueOfPropInfo == DBNull.Value) ? null : Convert.ChangeType(valueOfPropInfo, underlyingType);
+                    }
 
-                property.SetValue(item, result, null);
-                index++;
+                    else
+                    {
+                        result = Convert.ChangeType(row[column], propertyType);
+                    }
+
+                    property.SetValue(item, result, null);
+                    index++;
+                }
+            }
+            catch (Exception)
+            {
+                LogWriter.Write($"DataRow.ToObject<T>() Extension method - Failed to parse {row} to Type {typeOfT}. ArgumentException thrown.");
+                throw new ArgumentException($"Failed to parse {row} to {typeOfT}.");
             }
             return item;
         }
 
-        private static bool IsNullableType(Type type)
+        public static bool IsNullableType(this Type type)
         {
-            return type.IsGenericType && type.GetGenericTypeDefinition().Equals(typeof(Nullable<>));
+            return type.IsGenericType && type.GetGenericTypeDefinition() == typeof(Nullable<>);
         }
     }
 }

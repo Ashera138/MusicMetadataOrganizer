@@ -3,7 +3,7 @@ using System.Xml.Linq;
 
 namespace MusicMetadataUpdater_v2._0
 {
-    internal static class SensitiveDataReader
+    public static class SensitiveDataReader
     {
         private static XDocument xdoc;
 
