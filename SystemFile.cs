@@ -96,8 +96,8 @@ namespace MusicMetadataUpdater_v2._0
             if (Name != systemFile.Name ||
                 Directory != systemFile.Directory ||
                 Extension != systemFile.Extension ||
-                CreationTime != systemFile.CreationTime ||
-                LastAccessTime != systemFile.LastAccessTime ||
+                CreationTime.Date != systemFile.CreationTime.Date ||
+                LastAccessTime.Date != systemFile.LastAccessTime.Date ||
                 LengthInBytes != systemFile.LengthInBytes)
                     isEqual = false;
             return isEqual;

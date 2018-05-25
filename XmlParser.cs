@@ -15,7 +15,6 @@ namespace MusicMetadataUpdater_v2._0
                 var album = response.Element("TITLE").Value;
                 var title = response.Element("TRACK").Element("TITLE").Value;
                 var year = response.Element("DATE").ElementValueNull();
-                //var year = response.Element("DATE").ElementValueNull();
                 var genre = response.Element("GENRE").Value;
                 var track = response.Element("TRACK").Element("TRACK_NUM").ElementValueNull();
 
