@@ -1,0 +1,18 @@
+
+Log Entry : 1:37:38 PM Thursday, May 3, 2018
+  :
+  :MetadataFile.CreateTagLibFile() - Could not create a TagLibFile object from ''. System.ArgumentNullException: "Value cannot be null.
+Parameter name: path"
+-------------------------------
+
+Log Entry : 1:37:38 PM Thursday, May 3, 2018
+  :
+  :MetadataFile.CreateTagLibFile() - Could not create a TagLibFile object from ''. System.ArgumentNullException: "Value cannot be null.
+Parameter name: path"
+-------------------------------
+
+Log Entry : 1:37:38 PM Thursday, May 3, 2018
+  :
+  :MetadataFile.CreateTagLibFile() - Could not create a TagLibFile object from ''. System.ArgumentNullException: "Value cannot be null.
+Parameter name: path"
+-------------------------------

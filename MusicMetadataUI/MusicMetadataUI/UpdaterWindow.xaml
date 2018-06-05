@@ -1,0 +1,95 @@
+﻿<Window x:Class="MusicMetadataUI.UpdaterWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MusicMetadataUI"
+        mc:Ignorable="d"
+        Title="Verify Changes" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock x:Name="headerTextBlock" 
+                   Text="=== Header ==="
+                   Grid.ColumnSpan="2"
+                   HorizontalAlignment="Center"
+                   FontSize="20"
+                   Margin="5"/>
+        <Grid Grid.Row="1"
+              Grid.ColumnSpan="2"
+              HorizontalAlignment="Stretch"
+              VerticalAlignment="Stretch"
+              Margin="10">
+            <DataGrid Name="dataGrid"
+                      IsReadOnly="True"
+                      RowDetailsVisibilityMode="Visible"
+                      AlternatingRowBackground="AliceBlue"
+                      AlternationCount="2"
+                      AutoGenerateColumns="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="File"
+                                        Binding="{Binding Name}"/>
+                    <DataGridTextColumn Header="Filepath"
+                                        Binding="{Binding Filepath}"/>
+                </DataGrid.Columns>
+                <DataGrid.RowDetailsTemplate>
+                    <DataTemplate>
+                        <Border BorderThickness="0" Background="BlanchedAlmond" Padding="10">
+                            <StackPanel Orientation="Vertical">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock FontSize="12" Text="Email: " VerticalAlignment="Center" />
+                                    <TextBlock FontSize="16" Foreground="MidnightBlue" Text="{Binding Updates}" VerticalAlignment="Center" />
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock FontSize="12" Text="Phone: " VerticalAlignment="Center" />
+                                    <TextBlock FontSize="16" Foreground="MidnightBlue" Text="011899991199" VerticalAlignment="Center" />
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock FontSize="12" Text="Sales Person: " VerticalAlignment="Center" />
+                                    <TextBlock FontSize="16" Foreground="MidnightBlue" Text="Deepthi" VerticalAlignment="Center" />
+                                </StackPanel>
+                            </StackPanel>
+                        </Border>
+                    </DataTemplate>
+                </DataGrid.RowDetailsTemplate>
+            </DataGrid>
+        </Grid>
+        <!--<ListView Name="listView">
+            <GridView>
+                
+            </GridView>
+        </ListView>-->
+        <CheckBox x:Name="selectAllCheckBox"
+                  Content="Select all"
+                  Grid.Row="2"
+                  HorizontalAlignment="Left"
+                  VerticalAlignment="Top"
+                  Margin="10"
+                  Checked="SelectAllCheckBox_Checked"
+                  Unchecked="SelectAllCheckBox_Unchecked"/>
+        <Button x:Name="confirmButton" 
+                Content="Confirm" 
+                Grid.Row="3"
+                HorizontalAlignment="Stretch" 
+                VerticalAlignment="Top" 
+                Margin="10,0,5,0" 
+                Click="ConfirmButton_Click"/>
+            <Button x:Name="cancelButton" 
+                Content="Cancel" 
+                Grid.Row="3"
+                Grid.Column="1"
+                HorizontalAlignment="Stretch" 
+                VerticalAlignment="Top"                 
+                Margin="5,0,10,0" 
+                Click="CancelButton_Click"/>
+    </Grid>
+</Window>
