@@ -8,7 +8,7 @@ namespace MusicMetadataUpdater.IntegrationTests.File
     [TestClass]
     public class SystemFile_Tests
     {
-        SystemFile systemFile;
+        private SystemFile _systemFile;
         readonly string artist = "Angels and Airwaves";
         readonly string album = "We Don't Need to Whisper";
         readonly string song = "The Adventure.mp3";
@@ -17,234 +17,352 @@ namespace MusicMetadataUpdater.IntegrationTests.File
                                       "THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST " +
                                       "MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX PATH CHAR CONDITIONS";
 
-        private void PopulateTestingFields()
+        private SystemFile GetSystemFile(string filepath = 
+            @"C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper\The Adventure.mp3")
         {
-            var filepath = $@"C:\_TempForTesting\{artist}\{album}\{song}";
-            systemFile = new SystemFile(filepath);
-            var metadataFile = new MetadataFile(filepath);
-            systemFile.MetadataFile = metadataFile;
+            return new SystemFile(filepath);
         }
 
         [TestMethod]
-        public void MoveToCorrectArtistLocation_Test_ValidInput_FileIsMovedFromOriginalLocationAfterRename()
+        public void TrySave_Test_FileIsMovedFromOriginalLocationAfterValidArtistRename()
         {
-            FileTestSharedVariables.CopyFileToTestDir();
-            PopulateTestingFields();
-            systemFile.MetadataFile.Artist = "Test Artist";
+            try
+            {
+                FileTestSharedVariables.CopyFileToTestDir();
+                _systemFile = GetSystemFile();
+                _systemFile.MetadataFile.Artist = "Test Artist";
 
-            systemFile.MoveToCorrectArtistLocation();
+                _systemFile.TrySave();
 
-            bool success = !System.IO.File.Exists($@"C:\_TempForTesting\{artist}\{album}\{song}");
-            FileTestSharedVariables.DeleteTestDirectory();
-            if (!success)
-                Assert.Fail("The file still exists in its original location after being moved.");
+                bool fileExistInOriginalLocation = System.IO.File.Exists($@"C:\_TempForTesting\{artist}\{album}\{song}");
+                Assert.IsFalse(fileExistInOriginalLocation);
+            }
+            finally
+            {
+                FileTestSharedVariables.DeleteTestDirectory();
+            }
         }
 
         [TestMethod]
-        public void MoveToCorrectArtistLocation_Test_ValidInput_FileExistsInNewLocationAfterRename()
+        public void TrySave_Test_FileExistsInNewLocationAfterValidArtistRename()
         {
-            FileTestSharedVariables.CopyFileToTestDir();
-            PopulateTestingFields();
-            systemFile.MetadataFile.Artist = "Test Artist";
+            try
+            {
+                FileTestSharedVariables.CopyFileToTestDir();
+                _systemFile = GetSystemFile();
+                _systemFile.MetadataFile.Artist = "Test Artist";
 
-            systemFile.MoveToCorrectArtistLocation();
+                _systemFile.TrySave();
 
-            bool success = System.IO.File.Exists($@"C:\_TempForTesting\Test Artist\{album}\{song}");
-            FileTestSharedVariables.DeleteTestDirectory();
-            if (!success)
-                Assert.Fail("The file does not exist in the destination location after being moved.");
+                bool fileExistsInNewLocation = System.IO.File.Exists($@"C:\_TempForTesting\Test Artist\{album}\{song}");
+                Assert.IsTrue(fileExistsInNewLocation);
+            }
+            finally
+            {
+                FileTestSharedVariables.DeleteTestDirectory();
+            }
         }
 
         [TestMethod]
-        public void MoveToCorrectArtistLocation_Test_WhenNewNameOnlyDiffersByCase()
+        public void TrySave_Test_MovesSuccesfullyWhenNewArtistNameOnlyDiffersByCase()
         {
-            FileTestSharedVariables.CopyFileToTestDir();
-            PopulateTestingFields();
-            systemFile.MetadataFile.Artist = "aNgElS aNd AiRwAvEs";
-            var originalFilepath = systemFile.Filepath;
+            try
+            {
+                FileTestSharedVariables.CopyFileToTestDir();
+                _systemFile = GetSystemFile();
+                _systemFile.MetadataFile.Artist = "aNgElS aNd AiRwAvEs";
+                var originalFilepath = _systemFile.Filepath;
 
-            systemFile.MoveToCorrectArtistLocation();
+                _systemFile.TrySave();
 
-            var newFilePath = new FileInfo(systemFile.Filepath).FullName;
-            bool success = (originalFilepath != newFilePath);
-            FileTestSharedVariables.DeleteTestDirectory();
-            if (!success)
-                Assert.Fail("Names are equal.");
+                var newFilePath = _systemFile.Filepath;
+                bool areEqual = (originalFilepath == newFilePath);
+                Assert.IsFalse(areEqual);
+            }
+            finally
+            {
+                FileTestSharedVariables.DeleteTestDirectory();
+            }
         }
 
         [TestMethod]
-        public void MoveToCorrectArtistLocation_Test_FilepathTooLong()
+        public void TrySave_Test_DoesNotCreateDestinationDirectoryGivenArtistThatExceedsMaxPathLimit()
         {
-            FileTestSharedVariables.CopyFileToTestDir();
-            PopulateTestingFields();
-            systemFile.MetadataFile.Artist = exceedsMaxCharString;
+            try
+            {
+                FileTestSharedVariables.CopyFileToTestDir();
+                _systemFile = GetSystemFile();
+                _systemFile.MetadataFile.Artist = exceedsMaxCharString;
 
-            systemFile.MoveToCorrectArtistLocation();
+                _systemFile.TrySave();
 
-            bool success = !Directory.Exists($@"C:\_TempForTesting\{exceedsMaxCharString}\{album}\{song}");
-            FileTestSharedVariables.DeleteTestDirectory();
-            if (!success)
-                Assert.Fail();
+                var directoryExists = Directory.Exists($@"C:\_TempForTesting\{exceedsMaxCharString}\{album}\{song}");
+                Assert.IsFalse(directoryExists);
+            }
+            finally
+            {
+                FileTestSharedVariables.DeleteTestDirectory();
+            }
         }
 
         [TestMethod]
-        public void MoveToCorrectAlbumLocation_Test_ValidInput_FileIsMovedFromOriginalLocationAfterRename()
+        public void TrySave_Test_FileIsMovedFromOriginalLocationAfterValidAlbumRename()
         {
-            FileTestSharedVariables.CopyFileToTestDir();
-            PopulateTestingFields();
-            systemFile.MetadataFile.Album = "Test Album";
+            try
+            {
+                FileTestSharedVariables.CopyFileToTestDir();
+                _systemFile = GetSystemFile();
+                _systemFile.MetadataFile.Album = "Test Album";
 
-            systemFile.MoveToCorrectAlbumLocation();
+                _systemFile.TrySave();
 
-            bool success = !System.IO.File.Exists($@"C:\_TempForTesting\{artist}\{album}\{song}");
-            FileTestSharedVariables.DeleteTestDirectory();
-            if (!success)
-                Assert.Fail("The file still exists in its original location after being moved.");
+                var fileExistsInOriginalLocation = System.IO.File.Exists($@"C:\_TempForTesting\{artist}\{album}\{song}");
+                Assert.IsFalse(fileExistsInOriginalLocation);
+            }
+            finally
+            {
+                FileTestSharedVariables.DeleteTestDirectory();
+            }
         }
 
         [TestMethod]
-        public void MoveToCorrectAlbumLocation_Test_ValidInput_FileExistsInNewLocationAfterRename()
+        public void TrySave_Test_FileExistsInNewLocationAfterValidAlbumRename()
         {
-            FileTestSharedVariables.CopyFileToTestDir();
-            PopulateTestingFields();
-            systemFile.MetadataFile.Album = "Test Album";
+            try
+            {
+                FileTestSharedVariables.CopyFileToTestDir();
+                _systemFile = GetSystemFile();
+                _systemFile.MetadataFile.Album = "Test Album";
 
-            systemFile.MoveToCorrectAlbumLocation();
+                _systemFile.TrySave();
 
-            bool success = System.IO.File.Exists($@"C:\_TempForTesting\{artist}\Test Album\{song}");
-            FileTestSharedVariables.DeleteTestDirectory();
-            if (!success)
-                Assert.Fail("The file does not exist in the destination location after being moved.");
+                var fileExistsInDestinationLocation = System.IO.File.Exists(
+                    $@"C:\_TempForTesting\{artist}\Test Album\{song}");
+                Assert.IsTrue(fileExistsInDestinationLocation);
+            }
+            finally
+            {
+                FileTestSharedVariables.DeleteTestDirectory();           
+            }
         }
 
         [TestMethod]
-        public void MoveToCorrectAlbumLocation_Test_WhenNewNameOnlyDiffersByCase()
+        public void TrySave_Test_MovesSuccesfullyWhenNewAlbumNameOnlyDiffersByCase()
         {
-            FileTestSharedVariables.CopyFileToTestDir();
-            PopulateTestingFields();
-            systemFile.MetadataFile.Album = "wE dOn'T nEeD tO wHiSpEr";
-            var originalFilepath = systemFile.Filepath;
+            try
+            {
+                FileTestSharedVariables.CopyFileToTestDir();
+                _systemFile = GetSystemFile();
+                _systemFile.MetadataFile.Album = "wE dOn'T nEeD tO wHiSpEr";
+                var originalFilepath = _systemFile.Filepath;
 
-            systemFile.MoveToCorrectAlbumLocation();
+                _systemFile.TrySave();
 
-            var newFilePath = new FileInfo(systemFile.Filepath).FullName;
-            bool success = (originalFilepath != newFilePath);
-            FileTestSharedVariables.DeleteTestDirectory();
-            if (!success)
-                Assert.Fail("Original and new filepath are equal.");
+                var newFilePath = _systemFile.Filepath;
+                var areEqual = (originalFilepath == newFilePath);
+                Assert.IsFalse(areEqual);
+            }
+            finally
+            {
+                FileTestSharedVariables.DeleteTestDirectory();
+            }
         }
 
         [TestMethod]
-        public void MoveToCorrectAlbumLocation_Test_FilepathTooLong()
+        public void TrySave_Test_DoesNotCreateDestinationDirectoryGivenAlbumThatExceedsMaxPathLimit()
         {
-            FileTestSharedVariables.CopyFileToTestDir();
-            PopulateTestingFields();
-            systemFile.MetadataFile.Album = exceedsMaxCharString;
+            try
+            {
+                FileTestSharedVariables.CopyFileToTestDir();
+                _systemFile = GetSystemFile();
+                _systemFile.MetadataFile.Album = exceedsMaxCharString;
 
-            systemFile.MoveToCorrectAlbumLocation();
+                _systemFile.TrySave();
 
-            bool success = !Directory.Exists($@"C:\_TempForTesting\{artist}\{exceedsMaxCharString}\{song}");
-            FileTestSharedVariables.DeleteTestDirectory();
-            if (!success)
-                Assert.Fail("Directory that should have exceeded the max amount of characters in a path was actually created.");
+                var directoryExists = Directory.Exists($@"C:\_TempForTesting\{artist}\{exceedsMaxCharString}\{song}");
+                Assert.IsFalse(directoryExists);
+            }
+            finally
+            {
+                FileTestSharedVariables.DeleteTestDirectory();
+            }
         }
 
         [TestMethod]
-        public void RenameFile_Test_ValidInput_FileDoesNotHaveOldNameAfterRename()
+        public void TrySave_Test_FileDoesNotHaveOldNameAfterValidFileRename()
         {
-            FileTestSharedVariables.CopyFileToTestDir();
-            PopulateTestingFields();
-            systemFile.MetadataFile.Title = "Test name";
+            try
+            {
+                FileTestSharedVariables.CopyFileToTestDir();
+                _systemFile = GetSystemFile();
+                _systemFile.MetadataFile.Title = "Test name";
 
-            systemFile.RenameFile();
+                _systemFile.TrySave();
 
-            bool success = !System.IO.File.Exists($@"C:\_TempForTesting\{artist}\{album}\{song}");
-            FileTestSharedVariables.DeleteTestDirectory();
-            if (!success)
-                Assert.Fail();
+                var fileExistsWithOriginalName = System.IO.File.Exists($@"C:\_TempForTesting\{artist}\{album}\{song}");
+                Assert.IsFalse(fileExistsWithOriginalName);
+            }
+            finally
+            {
+                FileTestSharedVariables.DeleteTestDirectory();
+            }
         }
 
         [TestMethod]
-        public void RenameFile_Test_ValidInput_FileHasNewNameAfterRename()
+        public void TrySave_Test_FileHasNewNameAfterValidFileRename()
         {
-            FileTestSharedVariables.CopyFileToTestDir();
-            PopulateTestingFields();
-            systemFile.MetadataFile.Title = "Test name";
+            try
+            {
+                FileTestSharedVariables.CopyFileToTestDir();
+                _systemFile = GetSystemFile();
+                _systemFile.MetadataFile.Title = "Test name";
 
-            systemFile.RenameFile();
+                _systemFile.TrySave();
 
-            bool success = System.IO.File.Exists($@"C:\_TempForTesting\{artist}\{album}\Test name.mp3");
-            FileTestSharedVariables.DeleteTestDirectory();
-            if (!success)
-                Assert.Fail();
+                var fileExistsWithNewName = System.IO.File.Exists($@"C:\_TempForTesting\{artist}\{album}\Test name.mp3");
+                Assert.IsTrue(fileExistsWithNewName);
+            }
+            finally
+            {
+                FileTestSharedVariables.DeleteTestDirectory();
+            }
         }
 
         [TestMethod]
-        public void RenameFile_Test_WhenNewNameOnlyDiffersByCase()
+        public void TrySave_Test_RenamesSuccesfullyWhenNewFileNameOnlyDiffersByCase()
         {
-            FileTestSharedVariables.CopyFileToTestDir();
-            PopulateTestingFields();
-            systemFile.MetadataFile.Title = "tHe AdVeNtUrE";
-            var originalFilepath = systemFile.Filepath;
+            try
+            {
+                FileTestSharedVariables.CopyFileToTestDir();
+                _systemFile = GetSystemFile();
+                _systemFile.MetadataFile.Title = "tHe AdVeNtUrE";
+                var originalFilepath = _systemFile.Filepath;
 
-            systemFile.RenameFile();
+                _systemFile.TrySave();
 
-            var newFilePath = new FileInfo(systemFile.Filepath).FullName;
-            bool success = (originalFilepath != newFilePath);
-            FileTestSharedVariables.DeleteTestDirectory();
-            if (!success)
-                Assert.Fail("Names are equal.");
+                var newFilePath = _systemFile.Filepath;
+
+                var areEqual = (originalFilepath == newFilePath);
+                Assert.IsFalse(areEqual);
+            }
+            finally
+            {
+                FileTestSharedVariables.DeleteTestDirectory();
+            }
         }
 
         [TestMethod]
-        public void RenameFile_Test_FilepathTooLong()
+        public void TrySave_Test_DoesNotCreateDestinationDirectoryGivenFileNameThatExceedsMaxPathLimit()
         {
-            FileTestSharedVariables.CopyFileToTestDir();
-            PopulateTestingFields();
-            systemFile.MetadataFile.Title = exceedsMaxCharString;
+            try
+            {
+                FileTestSharedVariables.CopyFileToTestDir();
+                _systemFile = GetSystemFile();
+                _systemFile.MetadataFile.Title = exceedsMaxCharString;
 
-            systemFile.RenameFile();
+                _systemFile.TrySave();
 
-            bool success = !Directory.Exists($@"C:\_TempForTesting\{album}\{exceedsMaxCharString}.mp3");
-            FileTestSharedVariables.DeleteTestDirectory();
-            if (!success)
-                Assert.Fail();
+                var directoryExists = Directory.Exists($@"C:\_TempForTesting\{album}\{exceedsMaxCharString}.mp3");
+                Assert.IsFalse(directoryExists);
+            }
+            finally
+            {
+                FileTestSharedVariables.DeleteTestDirectory();
+            }
         }
 
         [TestMethod]
-        public void TrySave_Test_Condition()
+        public void TrySave_Test_ReturnsTrueForSuccessfulSave()
         {
-            // Determine test condition and update name ^
-            Assert.Fail("Not yet implemented.");
+            try
+            {
+                FileTestSharedVariables.CopyFileToTestDir();
+                _systemFile = GetSystemFile();
+
+                var saveResult = _systemFile.TrySave();
+
+                Assert.IsTrue(saveResult);
+            }
+            finally
+            {
+                FileTestSharedVariables.DeleteTestDirectory();
+            }
         }
 
         [TestMethod]
-        public void Equals_Test_ReturnsTrueWhenEqual()
+        public void TrySave_Test_ReturnsFalseForFailedSave()
         {
-            var filepath = FileTestSharedVariables.originalFilepath;
-            FileTestSharedVariables.CopyFileToTestDir(filepath);
+            try
+            {
+                FileTestSharedVariables.CopyFileToTestDir();
+                _systemFile = GetSystemFile();
+                _systemFile.MetadataFile.Artist = exceedsMaxCharString;
 
-            var systemFile1 = new MetadataFile(filepath);
-            var systemFile2 = new MetadataFile(filepath);
+                var saveResult = _systemFile.TrySave();
 
-            FileTestSharedVariables.DeleteTestDirectory();
-            if (!systemFile1.Equals(systemFile2))
-                Assert.Fail("Files are not equal.");
+                Assert.IsFalse(saveResult);
+            }
+            finally
+            {
+                FileTestSharedVariables.DeleteTestDirectory();
+            }
         }
 
         [TestMethod]
-        public void Equals_Test_ReturnsFalseWhenNotEqual()
+        public void TrySave_Test_ThrowsArgumentNullExceptionWhenMetadataFieldValueIsNull()
         {
-            var filepath = FileTestSharedVariables.originalFilepath;
-            FileTestSharedVariables.CopyFileToTestDir(filepath);
+            try
+            {
+                FileTestSharedVariables.CopyFileToTestDir();
+                _systemFile = GetSystemFile();
+                _systemFile.MetadataFile = null;
 
-            var systemFile1 = new MetadataFile(filepath);
-            var systemFile2 = new MetadataFile(filepath);
-            systemFile2.Artist = "Something different";
+                Assert.ThrowsException<ArgumentNullException>(() => _systemFile.TrySave());
+            }
+            finally
+            {
+                FileTestSharedVariables.DeleteTestDirectory();
+            }
+        }
 
-            FileTestSharedVariables.DeleteTestDirectory();
-            if (systemFile1.Equals(systemFile2))
-                Assert.Fail("Files are not equal.");
+        [TestMethod]
+        public void Equals_Test_ReturnsTrueGivenEqualSystemFile()
+        {
+            try
+            {
+                FileTestSharedVariables.CopyFileToTestDir();
+                var systemFile1 = GetSystemFile();
+                var systemFile2 = GetSystemFile();
+
+                var areEqual = systemFile1.Equals(systemFile2);
+
+                Assert.IsTrue(areEqual);
+            }
+            finally
+            {
+                FileTestSharedVariables.DeleteTestDirectory();
+            }
+        }
+
+        [TestMethod]
+        public void Equals_Test_ReturnsFalseGivenNotEqualSystemFile()
+        {
+            try
+            {
+                FileTestSharedVariables.CopyFileToTestDir();
+
+                var systemFile1 = GetSystemFile();
+                var systemFile2 = GetSystemFile();
+                systemFile2.Extension = ".SomeDifferentExtension";
+
+                var areEqual = systemFile1.Equals(systemFile2);
+
+                Assert.IsFalse(areEqual);
+            }
+            finally
+            {
+                FileTestSharedVariables.DeleteTestDirectory();
+            }
         }
     }
 }

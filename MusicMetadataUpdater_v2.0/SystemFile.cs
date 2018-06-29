@@ -45,8 +45,6 @@ namespace MusicMetadataUpdater_v2._0
         
         private SystemFile()
         {
-            SysIOFile = new FileInfo(Filepath);
-            PopulateFields();
         }
         
         public SystemFile(string filepath)
@@ -65,16 +63,19 @@ namespace MusicMetadataUpdater_v2._0
             CreationTime = Convert.ToDateTime(SysIOFile.CreationTime);
             LastAccessTime = Convert.ToDateTime(SysIOFile.LastAccessTime);
             LengthInBytes = SysIOFile.Length;
-            MetadataFile = new MetadataFile(Filepath);
+            MetadataFile = new MetadataFile(Filepath)
+            {
+                SystemFile = this
+            };
         }
 
         public bool TrySave()
         {
+            if (MetadataFile == null)
+                    throw new ArgumentNullException("Attempted to save SystemFile when its MetadataFile property is null.");
             bool success;
             try
             {
-                if (MetadataFile == null)
-                    throw new ArgumentNullException("Attempted to save SystemFile when its MetadataFile property is null.");
                 MoveToCorrectArtistLocation();
                 MoveToCorrectAlbumLocation();
                 RenameFile();
@@ -103,13 +104,13 @@ namespace MusicMetadataUpdater_v2._0
             return isEqual;
         }
 
-        public void MoveToCorrectArtistLocation()
+        private void MoveToCorrectArtistLocation()
         {
             Regex artistDirectoryRegex = new Regex(@"([^\\]+)\\([^\\]+)\\([^\\]+)$");
             RenameDirectory(artistDirectoryRegex, MetadataFile.Artist);
         }
 
-        public void MoveToCorrectAlbumLocation()
+        private void MoveToCorrectAlbumLocation()
         {
             Regex albumDirectoryRegex = new Regex(@"([^\\]+)\\([^\\]+)$");
             RenameDirectory(albumDirectoryRegex, MetadataFile.Album);
@@ -159,6 +160,7 @@ namespace MusicMetadataUpdater_v2._0
             {
                 LogWriter.Write($"FileManipulator.RenameFolder - Can not rename (move) '{currentDirectory.FullName}' " +
                         $"to '{destDirectory}'. {ex.GetType()}: \"{ex.Message}\"");
+                throw;
             }
         }
 
@@ -170,7 +172,7 @@ namespace MusicMetadataUpdater_v2._0
             this.Directory = destDirectory;
         }
 
-        public void RenameFile()
+        private void RenameFile()
         {
             var newFileName = CreateSanitizedFileName(MetadataFile.Title);
             if (this.Name != newFileName)

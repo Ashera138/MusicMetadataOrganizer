@@ -247,8 +247,6 @@ d:\my documents\visual studio 2017\Projects\MusicMetadataUpdater_v2.0\MusicMetad
 d:\my documents\visual studio 2017\Projects\MusicMetadataUpdater_v2.0\MusicMetadataUpdater.UnitTests\bin\Debug\System.Threading.Tasks.Extensions.dll
 d:\my documents\visual studio 2017\Projects\MusicMetadataUpdater_v2.0\MusicMetadataUpdater.UnitTests\bin\Debug\taglib-sharp.dll
 d:\my documents\visual studio 2017\Projects\MusicMetadataUpdater_v2.0\MusicMetadataUpdater.UnitTests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
-d:\my documents\visual studio 2017\Projects\MusicMetadataUpdater_v2.0\MusicMetadataUpdater.UnitTests\bin\Debug\MusicMetadataUI.pdb
-d:\my documents\visual studio 2017\Projects\MusicMetadataUpdater_v2.0\MusicMetadataUpdater.UnitTests\bin\Debug\MusicMetadataUI.exe.config
 d:\my documents\visual studio 2017\Projects\MusicMetadataUpdater_v2.0\MusicMetadataUpdater.UnitTests\bin\Debug\MusicMetadataUpdater_v2.0.pdb
 d:\my documents\visual studio 2017\Projects\MusicMetadataUpdater_v2.0\MusicMetadataUpdater.UnitTests\bin\Debug\MusicMetadataUpdater_v2.0.dll.config
 d:\my documents\visual studio 2017\Projects\MusicMetadataUpdater_v2.0\MusicMetadataUpdater.UnitTests\bin\Debug\Castle.Core.xml
@@ -264,3 +262,12 @@ d:\my documents\visual studio 2017\Projects\MusicMetadataUpdater_v2.0\MusicMetad
 d:\my documents\visual studio 2017\Projects\MusicMetadataUpdater_v2.0\MusicMetadataUpdater.UnitTests\obj\Debug\MusicMetadataUpdater.UnitTests.csproj.CopyComplete
 d:\my documents\visual studio 2017\Projects\MusicMetadataUpdater_v2.0\MusicMetadataUpdater.UnitTests\obj\Debug\MetadataFileTests.dll
 d:\my documents\visual studio 2017\Projects\MusicMetadataUpdater_v2.0\MusicMetadataUpdater.UnitTests\obj\Debug\MetadataFileTests.pdb
+d:\my documents\visual studio 2017\Projects\MusicMetadataUpdater_v2.0\MusicMetadataUpdater.UnitTests\bin\Debug\MusicMetadataUI.pdb
+d:\my documents\visual studio 2017\Projects\MusicMetadataUpdater_v2.0\MusicMetadataUpdater.UnitTests\bin\Debug\MusicMetadataUI.exe.config
+d:\my documents\visual studio 2017\Projects\MusicMetadataUpdater_v2.0\MusicMetadataUpdater.UnitTests\bin\Debug\GalaSoft.MvvmLight.dll
+d:\my documents\visual studio 2017\Projects\MusicMetadataUpdater_v2.0\MusicMetadataUpdater.UnitTests\bin\Debug\CommonServiceLocator.dll
+d:\my documents\visual studio 2017\Projects\MusicMetadataUpdater_v2.0\MusicMetadataUpdater.UnitTests\bin\Debug\GalaSoft.MvvmLight.Extras.dll
+d:\my documents\visual studio 2017\Projects\MusicMetadataUpdater_v2.0\MusicMetadataUpdater.UnitTests\bin\Debug\GalaSoft.MvvmLight.pdb
+d:\my documents\visual studio 2017\Projects\MusicMetadataUpdater_v2.0\MusicMetadataUpdater.UnitTests\bin\Debug\GalaSoft.MvvmLight.xml
+d:\my documents\visual studio 2017\Projects\MusicMetadataUpdater_v2.0\MusicMetadataUpdater.UnitTests\bin\Debug\GalaSoft.MvvmLight.Extras.pdb
+d:\my documents\visual studio 2017\Projects\MusicMetadataUpdater_v2.0\MusicMetadataUpdater.UnitTests\bin\Debug\GalaSoft.MvvmLight.Extras.xml

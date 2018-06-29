@@ -5,7 +5,7 @@ using System.IO;
 
 namespace MusicMetadataUI.Migrations
 {
-    internal sealed class Configuration : DbMigrationsConfiguration<MusicMetadataUpdater_v2._0.FileDb>
+    internal sealed class Configuration : DbMigrationsConfiguration<FileDb>
     {
         public Configuration()
         {

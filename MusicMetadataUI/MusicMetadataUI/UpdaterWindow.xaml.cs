@@ -14,39 +14,43 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using MusicMetadataUpdater_v2._0;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 
 namespace MusicMetadataUI
 {
     public partial class UpdaterWindow : Window
     {
-        private MainWindow _startingWindow;
-        private ObservableCollection<MusicMetadataUpdater_v2._0.MetadataFile> _files;
+        public ObservableCollection<MetadataUpdate> Updates { get; set; }
+        private ObservableCollection<MetadataFile> _files;
 
-        public UpdaterWindow(MainWindow originalWindow)
+        public UpdaterWindow()
         {
             InitializeComponent();
             this.Show();
 
-            _startingWindow = originalWindow;
-            var tempFiles = GetMetadataFilesFromSystemFiles(_startingWindow.files).ToList();
-            tempFiles.ForEach(f => f.PopulateUpdateList());
-            _files = new ObservableCollection<MusicMetadataUpdater_v2._0.MetadataFile>(tempFiles);
-            dataGrid.ItemsSource = _files;
-            //dataGrid.Visibility = Visibility.Hidden;
+            Updates = new ObservableCollection<MetadataUpdate>();
+            ProcessFiles();
 
-            /*
-            var view = new GridView();
-            view.Columns.Add(new GridViewColumn { Header = "File", DisplayMemberBinding = new Binding("File") });
-            view.Columns.Add(new GridViewColumn { Header = "Field", DisplayMemberBinding = new Binding("Field") });
-            view.Columns.Add(new GridViewColumn { Header = "Old Value", DisplayMemberBinding = new Binding("OldValue") });
-            view.Columns.Add(new GridViewColumn { Header = "New Value", DisplayMemberBinding = new Binding("NewValue") });
-            listView.View = view;
-            listView.Items.Add(new { File = _files[0], Field = "TestField", OldValue = "Test old value", NewValue = "Test new value" });
-            */
-            
+            lvFiles.ItemsSource = Updates;
+            CollectionView view = (CollectionView)CollectionViewSource.GetDefaultView(lvFiles.ItemsSource);
+            var groupDescription = new PropertyGroupDescription("MetadataFileName");
+            view.GroupDescriptions.Add(groupDescription);
         }
 
-        private IEnumerable<MusicMetadataUpdater_v2._0.MetadataFile> GetMetadataFilesFromSystemFiles(List<SystemFile> files)
+        // vague name
+        private void ProcessFiles()
+        {
+            var tempFiles = GetMetadataFilesFromSystemFiles(((MainWindow)Application.Current.MainWindow).userSelectedFiles).ToList();
+            tempFiles.ForEach(f => f.PopulateUpdateList());
+            _files = new ObservableCollection<MetadataFile>(tempFiles);
+
+            foreach (var file in _files)
+            {
+                Updates.AddMany(file.Updates);
+            }
+        }
+
+        private IEnumerable<MetadataFile> GetMetadataFilesFromSystemFiles(List<SystemFile> files)
         {
             foreach (SystemFile file in files)
             {
@@ -54,26 +58,42 @@ namespace MusicMetadataUI
             }
         }
 
-
-
         private void ConfirmButton_Click(object sender, RoutedEventArgs e)
         {
-
+            MessageBox.Show("Not yet implemented.");
         }
 
         private void CancelButton_Click(object sender, RoutedEventArgs e)
         {
-
+            MessageBox.Show("Not yet implemented.");
         }
 
         private void SelectAllCheckBox_Checked(object sender, RoutedEventArgs e)
         {
-
+            MessageBox.Show("Not yet implemented.");
         }
 
         private void SelectAllCheckBox_Unchecked(object sender, RoutedEventArgs e)
         {
-
+            MessageBox.Show("Not yet implemented.");
         }
+
+        public void OnWindowClosing(object sender, CancelEventArgs e)
+        {
+            // Not fixing this problem that it was supposed to fix: 
+            // Could not copy "d:\my documents\visual studio 2017\Projects\MusicMetadataUpdater_v2.0\
+            // MusicMetadataUpdater_v2.0\bin\Debug\MusicMetadataUpdater_v2.0.dll" to 
+            // "bin\Debug\MusicMetadataUpdater_v2.0.dll".Beginning retry 10 in 1000ms.
+            // The process cannot access the file 'bin\Debug\MusicMetadataUpdater_v2.0.dll' because it 
+            // is being used by another process.The file is locked by: "MusicMetadataUI (12328)" 
+            // MusicMetadataUI
+
+            Application.Current.Shutdown();
+        }
+
+        //private void Window_Loaded(object sender, RoutedEventArgs e)
+        //{
+        //    lvFiles.Height = this.Height * .8;
+        //}
     }
 }

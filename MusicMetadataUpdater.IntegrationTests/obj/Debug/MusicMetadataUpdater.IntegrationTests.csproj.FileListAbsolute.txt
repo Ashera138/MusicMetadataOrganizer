@@ -7,7 +7,6 @@ d:\my documents\visual studio 2017\Projects\MusicMetadataUpdater_v2.0\MusicMetad
 d:\my documents\visual studio 2017\Projects\MusicMetadataUpdater_v2.0\MusicMetadataUpdater.IntegrationTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
 d:\my documents\visual studio 2017\Projects\MusicMetadataUpdater_v2.0\MusicMetadataUpdater.IntegrationTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
 d:\my documents\visual studio 2017\Projects\MusicMetadataUpdater_v2.0\MusicMetadataUpdater.IntegrationTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
-d:\my documents\visual studio 2017\Projects\MusicMetadataUpdater_v2.0\MusicMetadataUpdater.IntegrationTests\obj\Debug\MusicMetadataUpdater.IntegrationTests.csprojAssemblyReference.cache
 d:\my documents\visual studio 2017\Projects\MusicMetadataUpdater_v2.0\MusicMetadataUpdater.IntegrationTests\obj\Debug\MusicMetadataUpdater.IntegrationTests.csproj.CoreCompileInputs.cache
 d:\my documents\visual studio 2017\Projects\MusicMetadataUpdater_v2.0\MusicMetadataUpdater.IntegrationTests\obj\Debug\MusicMetadataUpdater.IntegrationTests.csproj.CopyComplete
 d:\my documents\visual studio 2017\Projects\MusicMetadataUpdater_v2.0\MusicMetadataUpdater.IntegrationTests\obj\Debug\MusicMetadataUpdater.IntegrationTests.dll
@@ -19,5 +18,16 @@ d:\my documents\visual studio 2017\Projects\MusicMetadataUpdater_v2.0\MusicMetad
 d:\my documents\visual studio 2017\Projects\MusicMetadataUpdater_v2.0\MusicMetadataUpdater.IntegrationTests\bin\Debug\MusicMetadataUpdater_v2.0.dll.config
 d:\my documents\visual studio 2017\Projects\MusicMetadataUpdater_v2.0\MusicMetadataUpdater.IntegrationTests\bin\Debug\EntityFramework.xml
 d:\my documents\visual studio 2017\Projects\MusicMetadataUpdater_v2.0\MusicMetadataUpdater.IntegrationTests\bin\Debug\MusicMetadataUI.exe
+d:\my documents\visual studio 2017\Projects\MusicMetadataUpdater_v2.0\MusicMetadataUpdater.IntegrationTests\bin\Debug\MusicMetadataUpdater.IntegrationTests.dll.config
+d:\my documents\visual studio 2017\Projects\MusicMetadataUpdater_v2.0\MusicMetadataUpdater.IntegrationTests\bin\Debug\EntityFramework.SqlServer.dll
+d:\my documents\visual studio 2017\Projects\MusicMetadataUpdater_v2.0\MusicMetadataUpdater.IntegrationTests\bin\Debug\EntityFramework.SqlServer.xml
+d:\my documents\visual studio 2017\Projects\MusicMetadataUpdater_v2.0\MusicMetadataUpdater.IntegrationTests\obj\Debug\MusicMetadataUpdater.IntegrationTests.csprojAssemblyReference.cache
 d:\my documents\visual studio 2017\Projects\MusicMetadataUpdater_v2.0\MusicMetadataUpdater.IntegrationTests\bin\Debug\MusicMetadataUI.pdb
 d:\my documents\visual studio 2017\Projects\MusicMetadataUpdater_v2.0\MusicMetadataUpdater.IntegrationTests\bin\Debug\MusicMetadataUI.exe.config
+d:\my documents\visual studio 2017\Projects\MusicMetadataUpdater_v2.0\MusicMetadataUpdater.IntegrationTests\bin\Debug\GalaSoft.MvvmLight.dll
+d:\my documents\visual studio 2017\Projects\MusicMetadataUpdater_v2.0\MusicMetadataUpdater.IntegrationTests\bin\Debug\CommonServiceLocator.dll
+d:\my documents\visual studio 2017\Projects\MusicMetadataUpdater_v2.0\MusicMetadataUpdater.IntegrationTests\bin\Debug\GalaSoft.MvvmLight.Extras.dll
+d:\my documents\visual studio 2017\Projects\MusicMetadataUpdater_v2.0\MusicMetadataUpdater.IntegrationTests\bin\Debug\GalaSoft.MvvmLight.pdb
+d:\my documents\visual studio 2017\Projects\MusicMetadataUpdater_v2.0\MusicMetadataUpdater.IntegrationTests\bin\Debug\GalaSoft.MvvmLight.xml
+d:\my documents\visual studio 2017\Projects\MusicMetadataUpdater_v2.0\MusicMetadataUpdater.IntegrationTests\bin\Debug\GalaSoft.MvvmLight.Extras.pdb
+d:\my documents\visual studio 2017\Projects\MusicMetadataUpdater_v2.0\MusicMetadataUpdater.IntegrationTests\bin\Debug\GalaSoft.MvvmLight.Extras.xml

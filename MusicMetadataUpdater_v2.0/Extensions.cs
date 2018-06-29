@@ -7,6 +7,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Linq;
 using System.Xml.Linq;
+using System.Collections.ObjectModel;
 
 namespace MusicMetadataUpdater_v2._0
 {
@@ -37,9 +38,11 @@ namespace MusicMetadataUpdater_v2._0
             dbSet.RemoveRange(dbSet);
         }
 
-        public static async Task<List<T>> ToListAsync<T>(this DataTable table) where T : class, new()
+        public static List<T> ToList<T>(this DataTable table) where T : class, new()
         {
-            return await Task.Run(() => table.ToList<T>());
+            AssertNonNull(table.AsEnumerable(), "table");
+
+            return table.Rows.ToList<T>();
         }
 
         private static void AssertNonNull(this object value, string paramName)
@@ -53,23 +56,19 @@ namespace MusicMetadataUpdater_v2._0
             }
         }
 
-        public static List<T> ToList<T>(this DataTable table) where T : class, new()
-        {
-            AssertNonNull(table.AsEnumerable(), "table");
-
-            return table.Rows.ToList<T>();
-        }
-
         public static List<T> ToList<T>(this DataRowCollection rows) where T : class, new()
         {
-            AssertNonNull(rows, "rows");
-
             return rows.Cast<DataRow>().ToList<T>();
         }
 
         private static List<T> ToList<T>(this IEnumerable<DataRow> rows) where T : class, new()
         {
             return rows.Select(r => r.ToObject<T>()).ToList();
+        }
+
+        public static async Task<List<T>> ToListAsync<T>(this DataTable table) where T : class, new()
+        {
+            return await Task.Run(() => table.ToList<T>());
         }
 
         public static T ToObject<T>(this DataRow row) where T : new()
@@ -116,6 +115,28 @@ namespace MusicMetadataUpdater_v2._0
         public static bool IsNullableType(this Type type)
         {
             return type.IsGenericType && type.GetGenericTypeDefinition() == typeof(Nullable<>);
+        }
+
+        // needs unit tests
+        public static IEnumerable<TSource> DistinctBy<TSource, TKey>
+            (this IEnumerable<TSource> source, Func<TSource, TKey> keySelector)
+        {
+            HashSet<TKey> seenKeys = new HashSet<TKey>();
+            foreach (TSource element in source)
+            {
+                if (seenKeys.Add(keySelector(element)))
+                {
+                    yield return element;
+                }
+            }
+        }
+
+        public static void AddMany<T>(this ObservableCollection<T> list, ObservableCollection<T> elements)
+        {
+            foreach (T item in elements)
+            {
+                list.Add(item);
+            }
         }
     }
 }

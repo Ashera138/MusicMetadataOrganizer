@@ -505,3 +505,1057 @@ Log Entry : 5:20:56 PM Wednesday, May 23, 2018
 </RESPONSES>
 
 -------------------------------
+
+Log Entry : 6:22:41 PM Friday, May 25, 2018
+  :
+  :FileManipulator.RenameFolder - Can not rename (move) 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper' to 'C:\_TempForTesting\THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX PATH CHAR CONDITIONS\We Don't Need to Whisper'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 6:22:41 PM Friday, May 25, 2018
+  :
+  :FileManipulator.RenameFolder - Can not rename (move) 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper' to 'C:\_TempForTesting\Angels and Airwaves\THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX PATH CHAR CONDITIONS'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 6:22:41 PM Friday, May 25, 2018
+  :
+  :FileManipulator.RenameFile() - Can not rename (move) 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper\The Adventure.mp3' to 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper\THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX PATH CHAR CONDITIONS.mp3'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 6:22:41 PM Friday, May 25, 2018
+  :
+  :Test entry from LW_Write_Test_LogExistsAfterWriting() unit test.
+-------------------------------
+
+Log Entry : 6:22:41 PM Friday, May 25, 2018
+  :
+  :Test entry from LW_Write_Test_EntryExistsInLogFile() unit test. Current time: 6:22:41 PM
+-------------------------------
+
+Log Entry : 6:22:41 PM Friday, May 25, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.InvalidOperationException: "No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information."
+-------------------------------
+
+Log Entry : 6:22:41 PM Friday, May 25, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.InvalidOperationException: "No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information."
+-------------------------------
+
+Log Entry : 6:22:42 PM Friday, May 25, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.InvalidOperationException: "No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information."
+-------------------------------
+
+Log Entry : 6:22:42 PM Friday, May 25, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.InvalidOperationException: "No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information."
+-------------------------------
+
+Log Entry : 6:22:42 PM Friday, May 25, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.InvalidOperationException: "No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information."
+-------------------------------
+
+Log Entry : 6:22:42 PM Friday, May 25, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.InvalidOperationException: "No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information."
+-------------------------------
+
+Log Entry : 6:22:43 PM Friday, May 25, 2018
+  :
+  :XmlParse.ParseXml() Could not parse the GracenoteAPI XML response. System.NullReferenceException: "Object reference not set to an instance of an object." 
+ XML that threw the exception: <RESPONSES>
+ <MESSAGE>QUERY missing search strings</MESSAGE>
+ <ERROR RETRY="N">4000</ERROR>
+ <RESPONSE STATUS="ERROR">
+ </RESPONSE>
+                                                                                
+</RESPONSES>
+
+-------------------------------
+
+Log Entry : 2:33:56 PM Tuesday, May 29, 2018
+  :
+  :FileManipulator.RenameFolder - Can not rename (move) 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper' to 'C:\_TempForTesting\THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX PATH CHAR CONDITIONS\We Don't Need to Whisper'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 2:33:56 PM Tuesday, May 29, 2018
+  :
+  :FileManipulator.RenameFolder - Can not rename (move) 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper' to 'C:\_TempForTesting\Angels and Airwaves\THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX PATH CHAR CONDITIONS'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 2:33:56 PM Tuesday, May 29, 2018
+  :
+  :FileManipulator.RenameFile() - Can not rename (move) 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper\The Adventure.mp3' to 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper\THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX PATH CHAR CONDITIONS.mp3'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 2:33:56 PM Tuesday, May 29, 2018
+  :
+  :Test entry from LW_Write_Test_LogExistsAfterWriting() unit test.
+-------------------------------
+
+Log Entry : 2:33:56 PM Tuesday, May 29, 2018
+  :
+  :Test entry from LW_Write_Test_EntryExistsInLogFile() unit test. Current time: 2:33:56 PM
+-------------------------------
+
+Log Entry : 2:33:57 PM Tuesday, May 29, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.InvalidOperationException: "No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information."
+-------------------------------
+
+Log Entry : 2:33:57 PM Tuesday, May 29, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.InvalidOperationException: "No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information."
+-------------------------------
+
+Log Entry : 2:33:57 PM Tuesday, May 29, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.InvalidOperationException: "No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information."
+-------------------------------
+
+Log Entry : 2:33:57 PM Tuesday, May 29, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.InvalidOperationException: "No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information."
+-------------------------------
+
+Log Entry : 2:33:57 PM Tuesday, May 29, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.InvalidOperationException: "No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information."
+-------------------------------
+
+Log Entry : 2:33:57 PM Tuesday, May 29, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.InvalidOperationException: "No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information."
+-------------------------------
+
+Log Entry : 2:33:59 PM Tuesday, May 29, 2018
+  :
+  :XmlParse.ParseXml() Could not parse the GracenoteAPI XML response. System.NullReferenceException: "Object reference not set to an instance of an object." 
+ XML that threw the exception: <RESPONSES>
+ <MESSAGE>QUERY missing search strings</MESSAGE>
+ <ERROR RETRY="N">4000</ERROR>
+ <RESPONSE STATUS="ERROR">
+ </RESPONSE>
+                                                                                
+</RESPONSES>
+
+-------------------------------
+
+Log Entry : 2:40:35 PM Tuesday, May 29, 2018
+  :
+  :XmlParse.ParseXml() Could not parse the GracenoteAPI XML response. System.NullReferenceException: "Object reference not set to an instance of an object." 
+ XML that threw the exception: <RESPONSES>
+ <MESSAGE>QUERY missing search strings</MESSAGE>
+ <ERROR RETRY="N">4000</ERROR>
+ <RESPONSE STATUS="ERROR">
+ </RESPONSE>
+                                                                                
+</RESPONSES>
+
+-------------------------------
+
+Log Entry : 3:02:33 PM Tuesday, May 29, 2018
+  :
+  :XmlParse.ParseXml() Could not parse the GracenoteAPI XML response. System.NullReferenceException: "Object reference not set to an instance of an object." 
+ XML that threw the exception: <RESPONSES>
+ <MESSAGE>QUERY missing search strings</MESSAGE>
+ <ERROR RETRY="N">4000</ERROR>
+ <RESPONSE STATUS="ERROR">
+ </RESPONSE>
+                                                                                
+</RESPONSES>
+
+-------------------------------
+
+Log Entry : 10:49:39 AM Wednesday, May 30, 2018
+  :
+  :XmlParse.ParseXml() Could not parse the GracenoteAPI XML response. System.NullReferenceException: "Object reference not set to an instance of an object." 
+ XML that threw the exception: <RESPONSES>
+ <MESSAGE>QUERY missing search strings</MESSAGE>
+ <ERROR RETRY="N">4000</ERROR>
+ <RESPONSE STATUS="ERROR">
+ </RESPONSE>
+                                                                                
+</RESPONSES>
+
+-------------------------------
+
+Log Entry : 2:50:24 PM Thursday, May 31, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.InvalidOperationException: "No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information."
+-------------------------------
+
+Log Entry : 2:50:24 PM Thursday, May 31, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.InvalidOperationException: "No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information."
+-------------------------------
+
+Log Entry : 2:50:24 PM Thursday, May 31, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.InvalidOperationException: "No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information."
+-------------------------------
+
+Log Entry : 2:50:24 PM Thursday, May 31, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.InvalidOperationException: "No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information."
+-------------------------------
+
+Log Entry : 2:50:24 PM Thursday, May 31, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.InvalidOperationException: "No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information."
+-------------------------------
+
+Log Entry : 2:50:24 PM Thursday, May 31, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.InvalidOperationException: "No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information."
+-------------------------------
+
+Log Entry : 3:10:33 PM Thursday, May 31, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.InvalidOperationException: "No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information."
+-------------------------------
+
+Log Entry : 3:10:33 PM Thursday, May 31, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.InvalidOperationException: "No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information."
+-------------------------------
+
+Log Entry : 3:10:33 PM Thursday, May 31, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.InvalidOperationException: "No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information."
+-------------------------------
+
+Log Entry : 3:10:33 PM Thursday, May 31, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.InvalidOperationException: "No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information."
+-------------------------------
+
+Log Entry : 3:10:33 PM Thursday, May 31, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.InvalidOperationException: "No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information."
+-------------------------------
+
+Log Entry : 3:10:33 PM Thursday, May 31, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.InvalidOperationException: "No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information."
+-------------------------------
+
+Log Entry : 3:12:04 PM Thursday, May 31, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.InvalidOperationException: "No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information."
+-------------------------------
+
+Log Entry : 3:12:39 PM Thursday, May 31, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.InvalidOperationException: "No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information."
+-------------------------------
+
+Log Entry : 3:21:24 PM Thursday, May 31, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.Data.Entity.Infrastructure.DbUpdateException: "An error occurred while updating the entries. See the inner exception for details."
+-------------------------------
+
+Log Entry : 4:04:03 PM Thursday, May 31, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.Data.Entity.Infrastructure.DbUpdateException: "An error occurred while updating the entries. See the inner exception for details."
+-------------------------------
+
+Log Entry : 4:04:03 PM Thursday, May 31, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.Data.Entity.Infrastructure.DbUpdateException: "An error occurred while updating the entries. See the inner exception for details."
+-------------------------------
+
+Log Entry : 4:04:03 PM Thursday, May 31, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.Data.Entity.Infrastructure.DbUpdateException: "An error occurred while updating the entries. See the inner exception for details."
+-------------------------------
+
+Log Entry : 4:04:04 PM Thursday, May 31, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.Data.Entity.Infrastructure.DbUpdateException: "An error occurred while updating the entries. See the inner exception for details."
+-------------------------------
+
+Log Entry : 4:04:04 PM Thursday, May 31, 2018
+  :
+  :MetadataFile.CreateTagLibFile() - Could not create a TagLibFile object from ''. System.ArgumentNullException: "Value cannot be null.
+Parameter name: path"
+-------------------------------
+
+Log Entry : 4:04:04 PM Thursday, May 31, 2018
+  :
+  :MetadataFile.CreateTagLibFile() - Could not create a TagLibFile object from ''. System.ArgumentNullException: "Value cannot be null.
+Parameter name: path"
+-------------------------------
+
+Log Entry : 4:04:04 PM Thursday, May 31, 2018
+  :
+  :MetadataFile.CreateTagLibFile() - Could not create a TagLibFile object from ''. System.ArgumentNullException: "Value cannot be null.
+Parameter name: path"
+-------------------------------
+
+Log Entry : 4:04:04 PM Thursday, May 31, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.Data.Entity.Infrastructure.DbUpdateException: "An error occurred while updating the entries. See the inner exception for details."
+-------------------------------
+
+Log Entry : 4:04:04 PM Thursday, May 31, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.Data.Entity.Infrastructure.DbUpdateException: "An error occurred while updating the entries. See the inner exception for details."
+-------------------------------
+
+Log Entry : 4:04:04 PM Thursday, May 31, 2018
+  :
+  :MetadataFile.CreateTagLibFile() - Could not create a TagLibFile object from ''. System.ArgumentNullException: "Value cannot be null.
+Parameter name: path"
+-------------------------------
+
+Log Entry : 4:04:04 PM Thursday, May 31, 2018
+  :
+  :MetadataFile.CreateTagLibFile() - Could not create a TagLibFile object from ''. System.ArgumentNullException: "Value cannot be null.
+Parameter name: path"
+-------------------------------
+
+Log Entry : 4:04:04 PM Thursday, May 31, 2018
+  :
+  :MetadataFile.CreateTagLibFile() - Could not create a TagLibFile object from ''. System.ArgumentNullException: "Value cannot be null.
+Parameter name: path"
+-------------------------------
+
+Log Entry : 4:04:55 PM Thursday, May 31, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.Data.Entity.Infrastructure.DbUpdateException: "An error occurred while updating the entries. See the inner exception for details."
+-------------------------------
+
+Log Entry : 4:04:55 PM Thursday, May 31, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.Data.Entity.Infrastructure.DbUpdateException: "An error occurred while updating the entries. See the inner exception for details."
+-------------------------------
+
+Log Entry : 4:04:55 PM Thursday, May 31, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.Data.Entity.Infrastructure.DbUpdateException: "An error occurred while updating the entries. See the inner exception for details."
+-------------------------------
+
+Log Entry : 4:04:55 PM Thursday, May 31, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.Data.Entity.Infrastructure.DbUpdateException: "An error occurred while updating the entries. See the inner exception for details."
+-------------------------------
+
+Log Entry : 4:04:55 PM Thursday, May 31, 2018
+  :
+  :MetadataFile.CreateTagLibFile() - Could not create a TagLibFile object from ''. System.ArgumentNullException: "Value cannot be null.
+Parameter name: path"
+-------------------------------
+
+Log Entry : 4:04:55 PM Thursday, May 31, 2018
+  :
+  :MetadataFile.CreateTagLibFile() - Could not create a TagLibFile object from ''. System.ArgumentNullException: "Value cannot be null.
+Parameter name: path"
+-------------------------------
+
+Log Entry : 4:04:55 PM Thursday, May 31, 2018
+  :
+  :MetadataFile.CreateTagLibFile() - Could not create a TagLibFile object from ''. System.ArgumentNullException: "Value cannot be null.
+Parameter name: path"
+-------------------------------
+
+Log Entry : 4:04:55 PM Thursday, May 31, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.Data.Entity.Infrastructure.DbUpdateException: "An error occurred while updating the entries. See the inner exception for details."
+-------------------------------
+
+Log Entry : 4:04:55 PM Thursday, May 31, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.Data.Entity.Infrastructure.DbUpdateException: "An error occurred while updating the entries. See the inner exception for details."
+-------------------------------
+
+Log Entry : 4:04:55 PM Thursday, May 31, 2018
+  :
+  :MetadataFile.CreateTagLibFile() - Could not create a TagLibFile object from ''. System.ArgumentNullException: "Value cannot be null.
+Parameter name: path"
+-------------------------------
+
+Log Entry : 4:04:55 PM Thursday, May 31, 2018
+  :
+  :MetadataFile.CreateTagLibFile() - Could not create a TagLibFile object from ''. System.ArgumentNullException: "Value cannot be null.
+Parameter name: path"
+-------------------------------
+
+Log Entry : 4:04:55 PM Thursday, May 31, 2018
+  :
+  :MetadataFile.CreateTagLibFile() - Could not create a TagLibFile object from ''. System.ArgumentNullException: "Value cannot be null.
+Parameter name: path"
+-------------------------------
+
+Log Entry : 4:05:22 PM Thursday, May 31, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.Data.Entity.Infrastructure.DbUpdateException: "An error occurred while updating the entries. See the inner exception for details."
+-------------------------------
+
+Log Entry : 5:03:23 PM Thursday, May 31, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.Data.Entity.Infrastructure.DbUpdateException: "An error occurred while updating the entries. See the inner exception for details."
+-------------------------------
+
+Log Entry : 2:33:51 PM Friday, June 1, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.ArgumentNullException: "Value cannot be null.
+Parameter name: entity"
+-------------------------------
+
+Log Entry : 2:33:52 PM Friday, June 1, 2018
+  :
+  :MetadataFile.CreateTagLibFile() - Could not create a TagLibFile object from ''. System.ArgumentNullException: "Value cannot be null.
+Parameter name: path"
+-------------------------------
+
+Log Entry : 2:33:52 PM Friday, June 1, 2018
+  :
+  :MetadataFile.CreateTagLibFile() - Could not create a TagLibFile object from ''. System.ArgumentNullException: "Value cannot be null.
+Parameter name: path"
+-------------------------------
+
+Log Entry : 2:33:52 PM Friday, June 1, 2018
+  :
+  :MetadataFile.CreateTagLibFile() - Could not create a TagLibFile object from ''. System.ArgumentNullException: "Value cannot be null.
+Parameter name: path"
+-------------------------------
+
+Log Entry : 2:33:52 PM Friday, June 1, 2018
+  :
+  :MetadataFile.CreateTagLibFile() - Could not create a TagLibFile object from ''. System.ArgumentNullException: "Value cannot be null.
+Parameter name: path"
+-------------------------------
+
+Log Entry : 2:33:52 PM Friday, June 1, 2018
+  :
+  :MetadataFile.CreateTagLibFile() - Could not create a TagLibFile object from ''. System.ArgumentNullException: "Value cannot be null.
+Parameter name: path"
+-------------------------------
+
+Log Entry : 2:33:52 PM Friday, June 1, 2018
+  :
+  :MetadataFile.CreateTagLibFile() - Could not create a TagLibFile object from ''. System.ArgumentNullException: "Value cannot be null.
+Parameter name: path"
+-------------------------------
+
+Log Entry : 2:33:52 PM Friday, June 1, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.ArgumentNullException: "Value cannot be null.
+Parameter name: entity"
+-------------------------------
+
+Log Entry : 2:33:52 PM Friday, June 1, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.ArgumentNullException: "Value cannot be null.
+Parameter name: entity"
+-------------------------------
+
+Log Entry : 2:33:52 PM Friday, June 1, 2018
+  :
+  :MetadataFile.CreateTagLibFile() - Could not create a TagLibFile object from ''. System.ArgumentNullException: "Value cannot be null.
+Parameter name: path"
+-------------------------------
+
+Log Entry : 2:33:52 PM Friday, June 1, 2018
+  :
+  :MetadataFile.CreateTagLibFile() - Could not create a TagLibFile object from ''. System.ArgumentNullException: "Value cannot be null.
+Parameter name: path"
+-------------------------------
+
+Log Entry : 2:33:52 PM Friday, June 1, 2018
+  :
+  :MetadataFile.CreateTagLibFile() - Could not create a TagLibFile object from ''. System.ArgumentNullException: "Value cannot be null.
+Parameter name: path"
+-------------------------------
+
+Log Entry : 2:33:52 PM Friday, June 1, 2018
+  :
+  :MetadataFile.CreateTagLibFile() - Could not create a TagLibFile object from ''. System.ArgumentNullException: "Value cannot be null.
+Parameter name: path"
+-------------------------------
+
+Log Entry : 2:33:52 PM Friday, June 1, 2018
+  :
+  :MetadataFile.CreateTagLibFile() - Could not create a TagLibFile object from ''. System.ArgumentNullException: "Value cannot be null.
+Parameter name: path"
+-------------------------------
+
+Log Entry : 2:33:52 PM Friday, June 1, 2018
+  :
+  :MetadataFile.CreateTagLibFile() - Could not create a TagLibFile object from ''. System.ArgumentNullException: "Value cannot be null.
+Parameter name: path"
+-------------------------------
+
+Log Entry : 2:33:52 PM Friday, June 1, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.ArgumentNullException: "Value cannot be null.
+Parameter name: entity"
+-------------------------------
+
+Log Entry : 2:33:52 PM Friday, June 1, 2018
+  :
+  :MetadataFile.CreateTagLibFile() - Could not create a TagLibFile object from ''. System.ArgumentNullException: "Value cannot be null.
+Parameter name: path"
+-------------------------------
+
+Log Entry : 2:33:52 PM Friday, June 1, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.ArgumentNullException: "Value cannot be null.
+Parameter name: entity"
+-------------------------------
+
+Log Entry : 2:33:52 PM Friday, June 1, 2018
+  :
+  :MetadataFile.CreateTagLibFile() - Could not create a TagLibFile object from ''. System.ArgumentNullException: "Value cannot be null.
+Parameter name: path"
+-------------------------------
+
+Log Entry : 2:33:52 PM Friday, June 1, 2018
+  :
+  :MetadataFileRepository.AddFileAsync() - Could not add the given file to the database. File: Angels and Airwaves - The Adventure. System.ArgumentNullException: "Value cannot be null.
+Parameter name: entity"
+-------------------------------
+
+Log Entry : 8:36:08 AM Monday, June 4, 2018
+  :
+  :FileRepository.AddFileAsync() - Could not add the given file to the database. File: . System.ArgumentNullException: "Value cannot be null.
+Parameter name: entity"
+-------------------------------
+
+Log Entry : 8:36:43 AM Monday, June 4, 2018
+  :
+  :FileRepository.AddFileAsync() - Could not add the given file to the database. File: . System.ArgumentNullException: "Value cannot be null.
+Parameter name: entity"
+-------------------------------
+
+Log Entry : 4:28:49 PM Tuesday, June 5, 2018
+  :
+  :Test entry from LW_Write_Test_LogExistsAfterWriting() unit test.
+-------------------------------
+
+Log Entry : 4:29:01 PM Tuesday, June 5, 2018
+  :
+  :Test entry from LW_Write_Test_EntryExistsInLogFile() unit test. Current time: 4:29:01 PM
+-------------------------------
+
+Log Entry : 4:29:39 PM Tuesday, June 5, 2018
+  :
+  :Test entry from LW_Write_Test_EntryExistsInLogFile() unit test. Current time: 4:29:39 PM
+-------------------------------
+
+Log Entry : 4:45:42 PM Tuesday, June 5, 2018
+  :
+  :FileManipulator.RenameFolder - Can not rename (move) 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper' to 'C:\_TempForTesting\THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX PATH CHAR CONDITIONS\We Don't Need to Whisper'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 4:45:43 PM Tuesday, June 5, 2018
+  :
+  :FileManipulator.RenameFile() - Can not rename (move) 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper\The Adventure.mp3' to 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper\THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX PATH CHAR CONDITIONS.mp3'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 4:45:43 PM Tuesday, June 5, 2018
+  :
+  :FileManipulator.RenameFolder - Can not rename (move) 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper' to 'C:\_TempForTesting\Angels and Airwaves\THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX PATH CHAR CONDITIONS'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 5:07:53 PM Tuesday, June 5, 2018
+  :
+  :FileManipulator.RenameFolder - Can not rename (move) 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper' to 'C:\_TempForTesting\THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX PATH CHAR CONDITIONS\We Don't Need to Whisper'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 5:08:58 PM Tuesday, June 5, 2018
+  :
+  :FileManipulator.RenameFolder - Can not rename (move) 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper' to 'C:\_TempForTesting\THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX PATH CHAR CONDITIONS\We Don't Need to Whisper'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 5:10:27 PM Tuesday, June 5, 2018
+  :
+  :FileManipulator.RenameFolder - Can not rename (move) 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper' to 'C:\_TempForTesting\THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX PATH CHAR CONDITIONS\We Don't Need to Whisper'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 5:17:47 PM Tuesday, June 5, 2018
+  :
+  :FileManipulator.RenameFolder - Can not rename (move) 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper' to 'C:\_TempForTesting\Angels and Airwaves\THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX PATH CHAR CONDITIONS'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 5:19:10 PM Tuesday, June 5, 2018
+  :
+  :FileManipulator.RenameFolder - Can not rename (move) 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper' to 'C:\_TempForTesting\Angels and Airwaves\THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX PATH CHAR CONDITIONS'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 5:25:43 PM Tuesday, June 5, 2018
+  :
+  :FileManipulator.RenameFile() - Can not rename (move) 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper\The Adventure.mp3' to 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper\THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX PATH CHAR CONDITIONS.mp3'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 5:39:37 PM Tuesday, June 5, 2018
+  :
+  :FileManipulator.RenameFolder - Can not rename (move) 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper' to 'C:\_TempForTesting\Angels and Airwaves\THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX PATH CHAR CONDITIONS'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 5:42:33 PM Tuesday, June 5, 2018
+  :
+  :FileManipulator.RenameFolder - Can not rename (move) 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper' to 'C:\_TempForTesting\THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX PATH CHAR CONDITIONS\We Don't Need to Whisper'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 5:45:52 PM Tuesday, June 5, 2018
+  :
+  :FileManipulator.RenameFile() - Can not rename (move) 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper\The Adventure.mp3' to 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper\THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX PATH CHAR CONDITIONS.mp3'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 5:46:31 PM Tuesday, June 5, 2018
+  :
+  :FileManipulator.RenameFolder - Can not rename (move) 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper' to 'C:\_TempForTesting\THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX PATH CHAR CONDITIONS\We Don't Need to Whisper'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 5:46:31 PM Tuesday, June 5, 2018
+  :
+  :FileManipulator.RenameFile() - Can not rename (move) 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper\The Adventure.mp3' to 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper\THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX PATH CHAR CONDITIONS.mp3'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 5:46:31 PM Tuesday, June 5, 2018
+  :
+  :FileManipulator.RenameFolder - Can not rename (move) 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper' to 'C:\_TempForTesting\Angels and Airwaves\THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX PATH CHAR CONDITIONS'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 5:51:08 PM Tuesday, June 5, 2018
+  :
+  :FileManipulator.RenameFolder - Can not rename (move) 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper' to 'C:\_TempForTesting\THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX PATH CHAR CONDITIONS\We Don't Need to Whisper'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 5:51:21 PM Tuesday, June 5, 2018
+  :
+  :FileManipulator.RenameFolder - Can not rename (move) 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper' to 'C:\_TempForTesting\THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX PATH CHAR CONDITIONS\We Don't Need to Whisper'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 5:51:55 PM Tuesday, June 5, 2018
+  :
+  :FileManipulator.RenameFolder - Can not rename (move) 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper' to 'C:\_TempForTesting\THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX PATH CHAR CONDITIONS\We Don't Need to Whisper'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 5:53:15 PM Tuesday, June 5, 2018
+  :
+  :FileManipulator.RenameFolder - Can not rename (move) 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper' to 'C:\_TempForTesting\THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX PATH CHAR CONDITIONS\We Don't Need to Whisper'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 5:53:15 PM Tuesday, June 5, 2018
+  :
+  :SystemFile.TrySave() - Can not save SystemFile to 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper\The Adventure.mp3'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 5:53:26 PM Tuesday, June 5, 2018
+  :
+  :FileManipulator.RenameFolder - Can not rename (move) 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper' to 'C:\_TempForTesting\THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX PATH CHAR CONDITIONS\We Don't Need to Whisper'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 5:53:33 PM Tuesday, June 5, 2018
+  :
+  :SystemFile.TrySave() - Can not save SystemFile to 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper\The Adventure.mp3'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 5:53:58 PM Tuesday, June 5, 2018
+  :
+  :FileManipulator.RenameFolder - Can not rename (move) 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper' to 'C:\_TempForTesting\THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX PATH CHAR CONDITIONS\We Don't Need to Whisper'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 5:53:58 PM Tuesday, June 5, 2018
+  :
+  :SystemFile.TrySave() - Can not save SystemFile to 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper\The Adventure.mp3'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 5:53:58 PM Tuesday, June 5, 2018
+  :
+  :FileManipulator.RenameFile() - Can not rename (move) 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper\The Adventure.mp3' to 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper\THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX PATH CHAR CONDITIONS.mp3'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 5:53:58 PM Tuesday, June 5, 2018
+  :
+  :FileManipulator.RenameFolder - Can not rename (move) 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper' to 'C:\_TempForTesting\Angels and Airwaves\THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX PATH CHAR CONDITIONS'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 5:53:58 PM Tuesday, June 5, 2018
+  :
+  :SystemFile.TrySave() - Can not save SystemFile to 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper\The Adventure.mp3'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 5:53:58 PM Tuesday, June 5, 2018
+  :
+  :FileManipulator.RenameFolder - Can not rename (move) 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper' to 'C:\_TempForTesting\THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX PATH CHAR CONDITIONS\We Don't Need to Whisper'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 5:53:58 PM Tuesday, June 5, 2018
+  :
+  :SystemFile.TrySave() - Can not save SystemFile to 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper\The Adventure.mp3'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 6:09:52 PM Tuesday, June 5, 2018
+  :
+  :FileManipulator.RenameFolder - Can not rename (move) 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper' to 'C:\_TempForTesting\THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX PATH CHAR CONDITIONS\We Don't Need to Whisper'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 6:09:52 PM Tuesday, June 5, 2018
+  :
+  :SystemFile.TrySave() - Can not save SystemFile to 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper\The Adventure.mp3'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 6:09:52 PM Tuesday, June 5, 2018
+  :
+  :FileManipulator.RenameFile() - Can not rename (move) 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper\The Adventure.mp3' to 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper\THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX PATH CHAR CONDITIONS.mp3'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 6:09:52 PM Tuesday, June 5, 2018
+  :
+  :FileManipulator.RenameFolder - Can not rename (move) 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper' to 'C:\_TempForTesting\Angels and Airwaves\THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX PATH CHAR CONDITIONS'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 6:09:52 PM Tuesday, June 5, 2018
+  :
+  :SystemFile.TrySave() - Can not save SystemFile to 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper\The Adventure.mp3'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 6:09:52 PM Tuesday, June 5, 2018
+  :
+  :FileManipulator.RenameFolder - Can not rename (move) 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper' to 'C:\_TempForTesting\THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX PATH CHAR CONDITIONS\We Don't Need to Whisper'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 6:09:52 PM Tuesday, June 5, 2018
+  :
+  :SystemFile.TrySave() - Can not save SystemFile to 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper\The Adventure.mp3'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 2:31:38 PM Wednesday, June 6, 2018
+  :
+  :FileManipulator.RenameFolder - Can not rename (move) 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper' to 'C:\_TempForTesting\THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX PATH CHAR CONDITIONS\We Don't Need to Whisper'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 2:31:38 PM Wednesday, June 6, 2018
+  :
+  :SystemFile.TrySave() - Can not save SystemFile to 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper\The Adventure.mp3'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 2:31:38 PM Wednesday, June 6, 2018
+  :
+  :FileManipulator.RenameFolder - Can not rename (move) 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper' to 'C:\_TempForTesting\Angels and Airwaves\THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX PATH CHAR CONDITIONS'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 2:31:38 PM Wednesday, June 6, 2018
+  :
+  :SystemFile.TrySave() - Can not save SystemFile to 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper\The Adventure.mp3'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 2:31:39 PM Wednesday, June 6, 2018
+  :
+  :FileManipulator.RenameFile() - Can not rename (move) 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper\The Adventure.mp3' to 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper\THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX PATH CHAR CONDITIONS.mp3'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 2:31:39 PM Wednesday, June 6, 2018
+  :
+  :FileManipulator.RenameFolder - Can not rename (move) 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper' to 'C:\_TempForTesting\THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX PATH CHAR CONDITIONS\We Don't Need to Whisper'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 2:31:39 PM Wednesday, June 6, 2018
+  :
+  :SystemFile.TrySave() - Can not save SystemFile to 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper\The Adventure.mp3'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 2:31:39 PM Wednesday, June 6, 2018
+  :
+  :Test entry from LW_Write_Test_LogExistsAfterWriting() unit test.
+-------------------------------
+
+Log Entry : 2:31:39 PM Wednesday, June 6, 2018
+  :
+  :Test entry from LW_Write_Test_EntryExistsInLogFile() unit test. Current time: 2:31:39 PM
+-------------------------------
+
+Log Entry : 2:31:43 PM Wednesday, June 6, 2018
+  :
+  :XmlParse.ParseXml() Could not parse the GracenoteAPI XML response. System.NullReferenceException: "Object reference not set to an instance of an object." 
+ XML that threw the exception: <RESPONSES>
+ <MESSAGE>QUERY missing search strings</MESSAGE>
+ <ERROR RETRY="N">4000</ERROR>
+ <RESPONSE STATUS="ERROR">
+ </RESPONSE>
+                                                                                
+</RESPONSES>
+
+-------------------------------
+
+Log Entry : 2:36:57 PM Wednesday, June 6, 2018
+  :
+  :FileManipulator.RenameFolder - Can not rename (move) 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper' to 'C:\_TempForTesting\THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX PATH CHAR CONDITIONS\We Don't Need to Whisper'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 2:36:57 PM Wednesday, June 6, 2018
+  :
+  :SystemFile.TrySave() - Can not save SystemFile to 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper\The Adventure.mp3'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 2:36:57 PM Wednesday, June 6, 2018
+  :
+  :FileManipulator.RenameFolder - Can not rename (move) 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper' to 'C:\_TempForTesting\Angels and Airwaves\THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX PATH CHAR CONDITIONS'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 2:36:57 PM Wednesday, June 6, 2018
+  :
+  :SystemFile.TrySave() - Can not save SystemFile to 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper\The Adventure.mp3'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 2:36:57 PM Wednesday, June 6, 2018
+  :
+  :FileManipulator.RenameFile() - Can not rename (move) 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper\The Adventure.mp3' to 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper\THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX PATH CHAR CONDITIONS.mp3'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 2:36:57 PM Wednesday, June 6, 2018
+  :
+  :FileManipulator.RenameFolder - Can not rename (move) 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper' to 'C:\_TempForTesting\THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX PATH CHAR CONDITIONS\We Don't Need to Whisper'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 2:36:57 PM Wednesday, June 6, 2018
+  :
+  :SystemFile.TrySave() - Can not save SystemFile to 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper\The Adventure.mp3'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 2:36:57 PM Wednesday, June 6, 2018
+  :
+  :Test entry from LW_Write_Test_LogExistsAfterWriting() unit test.
+-------------------------------
+
+Log Entry : 2:36:57 PM Wednesday, June 6, 2018
+  :
+  :Test entry from LW_Write_Test_EntryExistsInLogFile() unit test. Current time: 2:36:57 PM
+-------------------------------
+
+Log Entry : 2:37:01 PM Wednesday, June 6, 2018
+  :
+  :XmlParse.ParseXml() Could not parse the GracenoteAPI XML response. System.NullReferenceException: "Object reference not set to an instance of an object." 
+ XML that threw the exception: <RESPONSES>
+ <MESSAGE>QUERY missing search strings</MESSAGE>
+ <ERROR RETRY="N">4000</ERROR>
+ <RESPONSE STATUS="ERROR">
+ </RESPONSE>
+                                                                                
+</RESPONSES>
+
+-------------------------------
+
+Log Entry : 9:39:53 PM Monday, June 11, 2018
+  :
+  :FileManipulator.RenameFolder - Can not rename (move) 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper' to 'C:\_TempForTesting\THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX PATH CHAR CONDITIONS\We Don't Need to Whisper'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 9:39:54 PM Monday, June 11, 2018
+  :
+  :SystemFile.TrySave() - Can not save SystemFile to 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper\The Adventure.mp3'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 9:39:54 PM Monday, June 11, 2018
+  :
+  :FileManipulator.RenameFolder - Can not rename (move) 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper' to 'C:\_TempForTesting\Angels and Airwaves\THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX PATH CHAR CONDITIONS'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 9:39:54 PM Monday, June 11, 2018
+  :
+  :SystemFile.TrySave() - Can not save SystemFile to 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper\The Adventure.mp3'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 9:39:54 PM Monday, June 11, 2018
+  :
+  :FileManipulator.RenameFile() - Can not rename (move) 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper\The Adventure.mp3' to 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper\THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX PATH CHAR CONDITIONS.mp3'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 9:39:54 PM Monday, June 11, 2018
+  :
+  :FileManipulator.RenameFolder - Can not rename (move) 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper' to 'C:\_TempForTesting\THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX PATH CHAR CONDITIONS\We Don't Need to Whisper'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 9:39:54 PM Monday, June 11, 2018
+  :
+  :SystemFile.TrySave() - Can not save SystemFile to 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper\The Adventure.mp3'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 9:39:54 PM Monday, June 11, 2018
+  :
+  :Test entry from LW_Write_Test_LogExistsAfterWriting() unit test.
+-------------------------------
+
+Log Entry : 9:39:54 PM Monday, June 11, 2018
+  :
+  :Test entry from LW_Write_Test_EntryExistsInLogFile() unit test. Current time: 9:39:54 PM
+-------------------------------
+
+Log Entry : 9:40:00 PM Monday, June 11, 2018
+  :
+  :XmlParse.ParseXml() Could not parse the GracenoteAPI XML response. System.NullReferenceException: "Object reference not set to an instance of an object." 
+ XML that threw the exception: <RESPONSES>
+ <MESSAGE>QUERY missing search strings</MESSAGE>
+ <ERROR RETRY="N">4000</ERROR>
+ <RESPONSE STATUS="ERROR">
+ </RESPONSE>
+                                                                                
+</RESPONSES>
+
+-------------------------------
+
+Log Entry : 10:00:45 PM Monday, June 11, 2018
+  :
+  :FileManipulator.RenameFolder - Can not rename (move) 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper' to 'C:\_TempForTesting\THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX PATH CHAR CONDITIONS\We Don't Need to Whisper'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 10:00:45 PM Monday, June 11, 2018
+  :
+  :SystemFile.TrySave() - Can not save SystemFile to 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper\The Adventure.mp3'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 10:00:45 PM Monday, June 11, 2018
+  :
+  :FileManipulator.RenameFile() - Can not rename (move) 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper\The Adventure.mp3' to 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper\THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX PATH CHAR CONDITIONS.mp3'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 10:00:45 PM Monday, June 11, 2018
+  :
+  :Test entry from LW_Write_Test_EntryExistsInLogFile() unit test. Current time: 10:00:45 PM
+-------------------------------
+
+Log Entry : 10:00:45 PM Monday, June 11, 2018
+  :
+  :Test entry from LW_Write_Test_LogExistsAfterWriting() unit test.
+-------------------------------
+
+Log Entry : 10:00:45 PM Monday, June 11, 2018
+  :
+  :FileManipulator.RenameFolder - Can not rename (move) 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper' to 'C:\_TempForTesting\Angels and Airwaves\THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX PATH CHAR CONDITIONS'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 10:00:45 PM Monday, June 11, 2018
+  :
+  :SystemFile.TrySave() - Can not save SystemFile to 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper\The Adventure.mp3'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 10:00:45 PM Monday, June 11, 2018
+  :
+  :FileManipulator.RenameFolder - Can not rename (move) 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper' to 'C:\_TempForTesting\THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX PATH CHAR CONDITIONS\We Don't Need to Whisper'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 10:00:45 PM Monday, June 11, 2018
+  :
+  :SystemFile.TrySave() - Can not save SystemFile to 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper\The Adventure.mp3'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 1:25:10 PM Tuesday, June 12, 2018
+  :
+  :FileManipulator.RenameFolder - Can not rename (move) 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper' to 'C:\_TempForTesting\THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX PATH CHAR CONDITIONS\We Don't Need to Whisper'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 1:25:10 PM Tuesday, June 12, 2018
+  :
+  :SystemFile.TrySave() - Can not save SystemFile to 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper\The Adventure.mp3'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 1:25:10 PM Tuesday, June 12, 2018
+  :
+  :FileManipulator.RenameFolder - Can not rename (move) 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper' to 'C:\_TempForTesting\Angels and Airwaves\THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX PATH CHAR CONDITIONS'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 1:25:10 PM Tuesday, June 12, 2018
+  :
+  :SystemFile.TrySave() - Can not save SystemFile to 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper\The Adventure.mp3'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 1:25:10 PM Tuesday, June 12, 2018
+  :
+  :FileManipulator.RenameFile() - Can not rename (move) 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper\The Adventure.mp3' to 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper\THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX PATH CHAR CONDITIONS.mp3'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 1:25:10 PM Tuesday, June 12, 2018
+  :
+  :FileManipulator.RenameFolder - Can not rename (move) 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper' to 'C:\_TempForTesting\THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX PATH CHAR CONDITIONS\We Don't Need to Whisper'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 1:25:10 PM Tuesday, June 12, 2018
+  :
+  :SystemFile.TrySave() - Can not save SystemFile to 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper\The Adventure.mp3'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 1:25:10 PM Tuesday, June 12, 2018
+  :
+  :Test entry from LW_Write_Test_LogExistsAfterWriting() unit test.
+-------------------------------
+
+Log Entry : 1:25:10 PM Tuesday, June 12, 2018
+  :
+  :Test entry from LW_Write_Test_EntryExistsInLogFile() unit test. Current time: 1:25:10 PM
+-------------------------------
+
+Log Entry : 1:25:19 PM Tuesday, June 12, 2018
+  :
+  :XmlParse.ParseXml() Could not parse the GracenoteAPI XML response. System.NullReferenceException: "Object reference not set to an instance of an object." 
+ XML that threw the exception: <RESPONSES>
+ <MESSAGE>QUERY missing search strings</MESSAGE>
+ <ERROR RETRY="N">4000</ERROR>
+ <RESPONSE STATUS="ERROR">
+ </RESPONSE>
+                                                                                
+</RESPONSES>
+
+-------------------------------
+
+Log Entry : 1:26:56 PM Tuesday, June 12, 2018
+  :
+  :FileManipulator.RenameFolder - Can not rename (move) 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper' to 'C:\_TempForTesting\THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX PATH CHAR CONDITIONS\We Don't Need to Whisper'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 1:26:56 PM Tuesday, June 12, 2018
+  :
+  :SystemFile.TrySave() - Can not save SystemFile to 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper\The Adventure.mp3'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 1:26:56 PM Tuesday, June 12, 2018
+  :
+  :FileManipulator.RenameFolder - Can not rename (move) 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper' to 'C:\_TempForTesting\Angels and Airwaves\THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX PATH CHAR CONDITIONS'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 1:26:56 PM Tuesday, June 12, 2018
+  :
+  :SystemFile.TrySave() - Can not save SystemFile to 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper\The Adventure.mp3'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 1:26:56 PM Tuesday, June 12, 2018
+  :
+  :FileManipulator.RenameFile() - Can not rename (move) 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper\The Adventure.mp3' to 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper\THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX PATH CHAR CONDITIONS.mp3'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 1:26:56 PM Tuesday, June 12, 2018
+  :
+  :FileManipulator.RenameFolder - Can not rename (move) 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper' to 'C:\_TempForTesting\THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX CHAR PATH CONDITIONS THIS IS A STRING TO TEST MAX PATH CHAR CONDITIONS\We Don't Need to Whisper'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 1:26:56 PM Tuesday, June 12, 2018
+  :
+  :SystemFile.TrySave() - Can not save SystemFile to 'C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper\The Adventure.mp3'. System.IO.PathTooLongException: "The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters."
+-------------------------------
+
+Log Entry : 1:26:56 PM Tuesday, June 12, 2018
+  :
+  :Test entry from LW_Write_Test_LogExistsAfterWriting() unit test.
+-------------------------------
+
+Log Entry : 1:26:56 PM Tuesday, June 12, 2018
+  :
+  :Test entry from LW_Write_Test_EntryExistsInLogFile() unit test. Current time: 1:26:56 PM
+-------------------------------
+
+Log Entry : 1:27:00 PM Tuesday, June 12, 2018
+  :
+  :XmlParse.ParseXml() Could not parse the GracenoteAPI XML response. System.NullReferenceException: "Object reference not set to an instance of an object." 
+ XML that threw the exception: <RESPONSES>
+ <MESSAGE>QUERY missing search strings</MESSAGE>
+ <ERROR RETRY="N">4000</ERROR>
+ <RESPONSE STATUS="ERROR">
+ </RESPONSE>
+                                                                                
+</RESPONSES>
+
+-------------------------------

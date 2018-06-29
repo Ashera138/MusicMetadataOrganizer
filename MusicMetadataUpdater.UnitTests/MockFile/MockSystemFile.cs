@@ -1,6 +1,5 @@
 ﻿using MusicMetadataUpdater_v2._0;
 using System;
-using System.Data;
 
 namespace MusicMetadataUpdater.UnitTests.MockFile
 {
@@ -14,24 +13,6 @@ namespace MusicMetadataUpdater.UnitTests.MockFile
         public DateTime CreationTime { get; set; }
         public DateTime LastAccessTime { get; set; }
         public long LengthInBytes { get; set; }
-
-        [Obsolete("Moving to TestClassFactory.")]
-        internal DataTable GetMockSystemFileDataTable()
-        {
-            var table = new DataTable();
-            table.Columns.Add("SystemFileId");
-            table.Columns.Add("Filepath");
-            table.Columns.Add("Name");
-            table.Columns.Add("Directory");
-            table.Columns.Add("Extension");
-            table.Columns.Add("CreationTime");
-            table.Columns.Add("LastAccessTime");
-            table.Columns.Add("LengthInBytes");
-
-            table.Rows.Add(SystemFileId, Filepath, Name, Directory, 
-                           Extension, CreationTime, LastAccessTime, LengthInBytes);
-            return table;
-        }
 
         public bool Equals(IFile otherFile)
         {

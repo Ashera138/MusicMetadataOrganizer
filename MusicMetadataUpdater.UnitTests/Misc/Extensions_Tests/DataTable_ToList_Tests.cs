@@ -10,7 +10,7 @@ namespace MetadataFileTests.Misc.Extensions_Tests
     [TestClass]
     public class DataTable_ToList_Tests
     {
-        MockMetadataFile _mockMetadataFileWithNullValues = TestClassFactory.GetMockMetadataFileWithDummyValues();
+        MockMetadataFile _mockMetadataFileWithNullValues = TestClassFactory.GetMockMetadataFileWithSomeNullDummyValues();
         MockMetadataFile _mockMetadataFileWithNoNullValues = TestClassFactory.GetMockMetadataFileWithNoNullDummyValues();
         DataTable _table;
     

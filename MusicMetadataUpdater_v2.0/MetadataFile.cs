@@ -135,10 +135,11 @@ namespace MusicMetadataUpdater_v2._0
         [NotMapped]
         public string Name
         {
-            get { return $"{Artist} - {Title}"; }
+            get { return this.ToString(); }
         }
 
-        private MetadataFile()
+        public MetadataFile()
+        //private MetadataFile()
         {
             CreateTagLibFile();
         }
@@ -210,7 +211,7 @@ namespace MusicMetadataUpdater_v2._0
             return rating;
         }
 
-        public void UpdateMetadataWithAPIResult(GracenoteAPIResponse gracenoteResponse)
+        public void UpdateMetadata(GracenoteAPIResponse gracenoteResponse)
         {
             // Re-add sanitization
             Artist = gracenoteResponse.Artist;
@@ -289,27 +290,27 @@ namespace MusicMetadataUpdater_v2._0
         {
             if (Response.Artist != Artist)
             {
-                Updates.Add(new MetadataUpdate(MetadataFileId, "Artist", Artist, Response.Artist));
+                Updates.Add(new MetadataUpdate(this, "Artist", Artist, Response.Artist));
             }
             if (Response.Album != Album)
             {
-                Updates.Add(new MetadataUpdate(MetadataFileId, "Album", Album, Response.Album));
+                Updates.Add(new MetadataUpdate(this, "Album", Album, Response.Album));
             }
             if (Response.Title != Title)
             {
-                Updates.Add(new MetadataUpdate(MetadataFileId, "Title", Title, Response.Title));
+                Updates.Add(new MetadataUpdate(this, "Title", Title, Response.Title));
             }
             if (Response.Year != Year)
             {
-                Updates.Add(new MetadataUpdate(MetadataFileId, "Year", Year.ToString(), Response.Year.ToString()));
+                Updates.Add(new MetadataUpdate(this, "Year", Year.ToString(), Response.Year.ToString()));
             }
             if (Response.Genres != Genres)
             {
-                Updates.Add(new MetadataUpdate(MetadataFileId, "Genres", Genres, Response.Genres));
+                Updates.Add(new MetadataUpdate(this, "Genres", Genres, Response.Genres));
             }
             if (Response.TrackNo != TrackNo)
             {
-                Updates.Add(new MetadataUpdate(MetadataFileId, "TrackNo", TrackNo.ToString(), Response.TrackNo.ToString()));
+                Updates.Add(new MetadataUpdate(this, "TrackNo", TrackNo.ToString(), Response.TrackNo.ToString()));
             }
         }
 

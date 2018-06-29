@@ -18,7 +18,7 @@ namespace MetadataFileTests.Misc.Extensions_Tests
 
         private void PopulateTestingFields()
         {
-            _mockMetadataFile = TestClassFactory.GetMockMetadataFileWithDummyValues();
+            _mockMetadataFile = TestClassFactory.GetMockMetadataFileWithSomeNullDummyValues();
             _mockSystemFile = TestClassFactory.GetMockSystemFileWithDummyValues();
             _tableForMockMetadataFile = TestClassFactory.GetDataTable(_mockMetadataFile);
             _tableForMockSystemFile = TestClassFactory.GetDataTable(_mockSystemFile);

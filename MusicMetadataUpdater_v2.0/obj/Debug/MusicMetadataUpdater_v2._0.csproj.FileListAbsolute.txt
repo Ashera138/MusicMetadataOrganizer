@@ -13,7 +13,6 @@ d:\my documents\visual studio 2017\Projects\MusicMetadataUpdater_v2.0\MusicMetad
 d:\my documents\visual studio 2017\Projects\MusicMetadataUpdater_v2.0\MusicMetadataUpdater_v2.0\bin\Debug\EntityFramework.SqlServer.xml
 d:\my documents\visual studio 2017\Projects\MusicMetadataUpdater_v2.0\MusicMetadataUpdater_v2.0\bin\Debug\policy.2.0.taglib-sharp.config
 d:\my documents\visual studio 2017\Projects\MusicMetadataUpdater_v2.0\MusicMetadataUpdater_v2.0\obj\Debug\MusicMetadataUpdater_v2._0.csproj.CopyComplete
-d:\My Documents\Visual Studio 2017\Projects\MusicMetadataUpdater_v2.0\MusicMetadataUpdater_v2.0\obj\Debug\MusicMetadataUpdater_v2._0.csprojAssemblyReference.cache
 d:\my documents\visual studio 2017\Projects\MusicMetadataUpdater_v2.0\MusicMetadataUpdater_v2.0\bin\Debug\Microsoft.EntityFrameworkCore.dll
 d:\my documents\visual studio 2017\Projects\MusicMetadataUpdater_v2.0\MusicMetadataUpdater_v2.0\bin\Debug\Microsoft.Extensions.Caching.Abstractions.dll
 d:\my documents\visual studio 2017\Projects\MusicMetadataUpdater_v2.0\MusicMetadataUpdater_v2.0\bin\Debug\Microsoft.Extensions.Caching.Memory.dll
@@ -42,3 +41,4 @@ d:\my documents\visual studio 2017\Projects\MusicMetadataUpdater_v2.0\MusicMetad
 d:\my documents\visual studio 2017\Projects\MusicMetadataUpdater_v2.0\MusicMetadataUpdater_v2.0\bin\Debug\System.Interactive.Async.Providers.xml
 d:\my documents\visual studio 2017\Projects\MusicMetadataUpdater_v2.0\MusicMetadataUpdater_v2.0\bin\Debug\MSTestExtensions.dll
 d:\my documents\visual studio 2017\Projects\MusicMetadataUpdater_v2.0\MusicMetadataUpdater_v2.0\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+d:\my documents\visual studio 2017\Projects\MusicMetadataUpdater_v2.0\MusicMetadataUpdater_v2.0\obj\Debug\MusicMetadataUpdater_v2._0.csprojAssemblyReference.cache

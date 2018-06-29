@@ -101,6 +101,7 @@
     <Compile Include="Misc\Extensions_Tests\Type_IsNullableType_Tests.cs" />
     <Compile Include="Misc\TestClassFactory.cs" />
     <Compile Include="Misc\Extensions_Tests\XElement_ElementValueNull_Tests.cs" />
+    <Compile Include="Misc\XmlGenerator_Tests.cs" />
     <Compile Include="MockFile\MockMetadataFile.cs" />
     <Compile Include="MockFile\MockSystemFile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

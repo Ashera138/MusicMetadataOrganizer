@@ -6,29 +6,7 @@ namespace MetadataFileTests.Misc
 {
     internal static class TestClassFactory
     {
-        // duplicated code
-        internal static MockMetadataFile GetMockMetadataFileWithDummyValues()
-        {
-            return new MockMetadataFile()
-            {
-                MetadataFileId = 1,
-                Filepath = @"C:/Not a real filepath/file.mp3",
-                BitRate = 250,
-                MediaType = "Audio",
-                Artist = "Artist",
-                Album = "Album",
-                Title = "Title",
-                Genres = "Genres",
-                Lyrics = "Lyrics",
-                TrackNo = 1,
-                Year = 2018,
-                Rating = null,
-                DurationInTicks = 2000
-            };
-        }
-
-        // duplicated code
-        internal static MockMetadataFile GetMockMetadataFileWithNoNullDummyValues()
+        private static MockMetadataFile GetFullyPopulatedMockMetadataFile()
         {
             return new MockMetadataFile()
             {
@@ -46,6 +24,19 @@ namespace MetadataFileTests.Misc
                 Rating = 5,
                 DurationInTicks = 2000
             };
+        }
+
+        internal static MockMetadataFile GetMockMetadataFileWithSomeNullDummyValues()
+        {
+            var mockFileNoNulls = GetFullyPopulatedMockMetadataFile();
+            var mockFileWithNulls = mockFileNoNulls;
+            mockFileWithNulls.Rating = null;
+            return mockFileWithNulls;
+        }
+
+        internal static MockMetadataFile GetMockMetadataFileWithNoNullDummyValues()
+        {
+            return GetFullyPopulatedMockMetadataFile();
         }
 
         internal static MockSystemFile GetMockSystemFileWithDummyValues()

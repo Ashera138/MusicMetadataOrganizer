@@ -10,97 +10,131 @@ namespace MusicMetadataUpdater.IntegrationTests.File
         [TestMethod]
         public void DeleteEmptyFolders_Test_EmptyFoldersAreDeleted()
         {
-            var testDirectory = @"C:\_TempForTesting\";
-            Directory.CreateDirectory(testDirectory);
+            try
+            {
+                string testDirectory = FileTestSharedVariables.baseTestDirectory;
+                Directory.CreateDirectory(testDirectory);
 
-            FileManipulator.DeleteEmptyFolders(new DirectoryInfo(testDirectory));
+                FileManipulator.DeleteEmptyFolders(new DirectoryInfo(testDirectory));
 
-            bool success = !Directory.Exists(testDirectory);
-            FileTestSharedVariables.DeleteTestDirectory();
-            if (!success)
-                Assert.Fail("Original empty directory exists; it did not get deleted.");
+                bool deletionSuccessful = !Directory.Exists(testDirectory);
+                Assert.IsTrue(deletionSuccessful);
+            }
+            finally
+            {
+                FileTestSharedVariables.DeleteTestDirectory();
+            }
         }
 
         [TestMethod]
-        public void DeleteEmptyFolders_Test_EmptyParentFolderGetsDeleted_WhenNoFilesExistInSingleSubdirector()
+        public void DeleteEmptyFolders_Test_EmptyParentFolderGetsDeletedWhenNoFilesExistInSingleSubdirector()
         {
-            var testDirectory = @"C:\_TempForTesting\Empty Subdirectory\";
-            Directory.CreateDirectory(testDirectory);
+            try
+            {
+                string testDirectory = Path.Combine(FileTestSharedVariables.baseTestDirectory, @"Empty Subdirectory\");
+                Directory.CreateDirectory(testDirectory);
 
-            FileManipulator.DeleteEmptyFolders(new DirectoryInfo(@"C:\_TempForTesting\Empty Subdirectory\"));
+                FileManipulator.DeleteEmptyFolders(new DirectoryInfo(testDirectory));
 
-            bool success = !Directory.Exists(@"C:\_TempForTesting\");
-            FileTestSharedVariables.DeleteTestDirectory();
-            if (!success)
-                Assert.Fail();
+                bool deletionSuccessful = !Directory.Exists(FileTestSharedVariables.baseTestDirectory);
+                Assert.IsTrue(deletionSuccessful);
+            }
+            finally
+            {
+                FileTestSharedVariables.DeleteTestDirectory();
+            }
         }
 
         [TestMethod]
-        public void DeleteEmptyFolders_Test_EmptyParentFolderGetsDeleted_WhenNoFilesExistInMultipleSubdirectories()
+        public void DeleteEmptyFolders_Test_EmptyParentFolderGetsDeletedWhenNoFilesExistInMultipleSubdirectories()
         {
-            var testDirectory = @"C:\_TempForTesting\First Empty Dir\Second Empty Dir\";
-            Directory.CreateDirectory(testDirectory);
+            try
+            {
+                string middleTestDirectory = Path.Combine(FileTestSharedVariables.baseTestDirectory, @"First Empty Dir\");
+                string bottomTestDirectory = Path.Combine(middleTestDirectory, @"Second Empty Dir\");
+                Directory.CreateDirectory(bottomTestDirectory);
 
-            FileManipulator.DeleteEmptyFolders(new DirectoryInfo(@"C:\_TempForTesting\First Empty Dir\"));
+                FileManipulator.DeleteEmptyFolders(new DirectoryInfo(middleTestDirectory));
 
-            bool success = !Directory.Exists(@"C:\_TempForTesting\");
-            FileTestSharedVariables.DeleteTestDirectory();
-            if (!success)
-                Assert.Fail();
+                bool deletionSuccessful = !Directory.Exists(FileTestSharedVariables.baseTestDirectory);
+                Assert.IsTrue(deletionSuccessful);
+            }
+            finally
+            {
+                FileTestSharedVariables.DeleteTestDirectory();
+            }
         }
 
         [TestMethod]
         public void DeleteEmptyFolders_Test_NoDeletionsWhenFolderHasFiles()
         {
-            var testDirectory = @"C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper\";
-            FileTestSharedVariables.CopyFileToTestDir();
+            try
+            {
+                FileTestSharedVariables.CopyFileToTestDir();
+                string testDirectory = Path.Combine(
+                    FileTestSharedVariables.baseTestDirectory, @"Angels and Airwaves\We Don't Need to Whisper\");
 
-            FileManipulator.DeleteEmptyFolders(new DirectoryInfo(testDirectory));
+                FileManipulator.DeleteEmptyFolders(new DirectoryInfo(testDirectory));
 
-            bool success = Directory.Exists(testDirectory);
-            FileTestSharedVariables.DeleteTestDirectory();
-            if (!success)
-                Assert.Fail("The test directory was deleted even though it had a file.");
+                bool testDirectoryExists = Directory.Exists(testDirectory);
+                Assert.IsTrue(testDirectoryExists);
+            }
+            finally
+            {
+                FileTestSharedVariables.DeleteTestDirectory();
+            }
         }
 
         [TestMethod]
         public void DeleteEmptyFolders_Test_NoDeletionsWhenParentFolderHasFiles()
         {
-            FileTestSharedVariables.CopyFileToTestDir();
-            var testDirectory = @"C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper\";
-            Directory.CreateDirectory(Path.Combine(testDirectory, @"Empty Bottom Folder\"));
+            try
+            {
+                FileTestSharedVariables.CopyFileToTestDir();
+                string testDirectory = Path.Combine(
+                    FileTestSharedVariables.baseTestDirectory, @"Angels and Airwaves\We Don't Need to Whisper\");
+                Directory.CreateDirectory(Path.Combine(testDirectory, @"Empty Bottom Folder\"));
 
-            FileManipulator.DeleteEmptyFolders(new DirectoryInfo(testDirectory));
+                FileManipulator.DeleteEmptyFolders(new DirectoryInfo(testDirectory));
 
-            bool success = Directory.Exists(testDirectory);
-            FileTestSharedVariables.DeleteTestDirectory();
-            if (!success)
-                Assert.Fail("The test directory was deleted even though its parent directory had a file.");
+                bool testDirectoryExists = Directory.Exists(testDirectory);
+                Assert.IsTrue(testDirectoryExists);
+            }
+            finally
+            {
+                FileTestSharedVariables.DeleteTestDirectory();
+            }
         }
 
         [TestMethod]
         public void DeleteEmptyFolders_Test_NoDeletionsWhenSubFolderHasFiles()
         {
-            FileTestSharedVariables.CopyFileToTestDir();
-            var testDirectory = @"C:\_TempForTesting\Angels and Airwaves\We Don't Need to Whisper\";
+            try
+            {
+                FileTestSharedVariables.CopyFileToTestDir();
+                string testDirectory = Path.Combine(FileTestSharedVariables.baseTestDirectory, @"Angels and Airwaves\");
+                string testSubdirectory = Path.Combine(testDirectory, @"We Don't Need to Whisper\");
 
-            FileManipulator.DeleteEmptyFolders(new DirectoryInfo(@"C:\_TempForTesting\Angels and Airwaves\"));
+                FileManipulator.DeleteEmptyFolders(new DirectoryInfo(testDirectory));
 
-            bool success = Directory.Exists(testDirectory);
-            FileTestSharedVariables.DeleteTestDirectory();
-            if (!success)
-                Assert.Fail("The test directory was deleted even though its subdirectory had a file.");
+                bool testDirectoryExists = Directory.Exists(testSubdirectory);
+                Assert.IsTrue(testDirectoryExists);
+            }
+            finally
+            {
+                FileTestSharedVariables.DeleteTestDirectory();
+            }
         }
 
         [TestMethod]
         public void DeleteEmptyFolders_Test_InaccessibleDirectoryInput()
         {
-            var inaccessibleDirectory = @"C:\PerfLogs\";
+            string inaccessibleDirectory = @"C:\PerfLogs\";
 
             FileManipulator.DeleteEmptyFolders(new DirectoryInfo(inaccessibleDirectory));
 
-            if (!Directory.Exists(inaccessibleDirectory))
-                Assert.Fail("");
+            bool directoryExists = Directory.Exists(inaccessibleDirectory);
+            Assert.IsTrue(directoryExists);
         }
     }
 }

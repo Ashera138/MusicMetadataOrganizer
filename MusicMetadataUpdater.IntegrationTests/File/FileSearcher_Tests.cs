@@ -1,5 +1,6 @@
-﻿using System;
+﻿using System.IO;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using MusicMetadataUpdater_v2._0;
 
 namespace MusicMetadataUpdater.IntegrationTests.File
 {
@@ -7,9 +8,45 @@ namespace MusicMetadataUpdater.IntegrationTests.File
     public class FileSearcher_Tests
     {
         [TestMethod]
-        public void TestMethod1()
+        public void ExtractFiles_Test_ReturnsEmptyListGivenADirectoryWithNoParsableFiles()
         {
-            Assert.Fail("Not yet implemented.");
+            try
+            {
+                FileTestSharedVariables.CreateTestDirectory();
+
+                var list = FileSearcher.ExtractFiles(FileTestSharedVariables.testDirectory);
+
+                Assert.IsTrue(list.Count == 0);
+            }
+            finally
+            {
+                FileTestSharedVariables.DeleteTestDirectory();
+            }
+        }
+
+        [TestMethod]
+        public void ExtractFiles_Test_ReturnsPopulatedListGivenADirectoryWithParsableFiles()
+        {
+            try
+            {
+                FileTestSharedVariables.CopyFileToTestDir();
+
+                var list = FileSearcher.ExtractFiles(FileTestSharedVariables.testDirectory);
+
+                Assert.IsTrue(list.Count > 0);
+            }
+            finally
+            {
+                FileTestSharedVariables.DeleteTestDirectory();
+            }
+        }
+
+        [TestMethod]
+        public void ExtractFiles_Test_ThrowsDirectoryNotFoundExceptionGivenInvalidDirectory()
+        {
+            var invalidDirectory = "This is not a valid directory";
+
+            Assert.ThrowsException<DirectoryNotFoundException>(() => FileSearcher.ExtractFiles(invalidDirectory));
         }
     }
 }

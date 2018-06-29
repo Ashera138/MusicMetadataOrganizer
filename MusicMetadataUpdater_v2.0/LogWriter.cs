@@ -6,7 +6,7 @@ namespace MusicMetadataUpdater_v2._0
 {
     public static class LogWriter
     {
-        private static string app_exePath;
+        private static readonly string app_exePath;
 
         static LogWriter()
         {
