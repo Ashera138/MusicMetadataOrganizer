@@ -21,41 +21,12 @@ namespace MusicMetadataUI
     public partial class UpdaterWindow : Window
     {
         public ObservableCollection<MetadataUpdate> Updates { get; set; }
-        private ObservableCollection<MetadataFile> _files;
 
-        public UpdaterWindow()
+        public UpdaterWindow(ObservableCollection<MetadataUpdate> updates)
         {
+            Updates = updates;
             InitializeComponent();
             this.Show();
-
-            Updates = new ObservableCollection<MetadataUpdate>();
-            ProcessFiles();
-
-            lvFiles.ItemsSource = Updates;
-            CollectionView view = (CollectionView)CollectionViewSource.GetDefaultView(lvFiles.ItemsSource);
-            var groupDescription = new PropertyGroupDescription("MetadataFileName");
-            view.GroupDescriptions.Add(groupDescription);
-        }
-
-        // vague name
-        private void ProcessFiles()
-        {
-            var tempFiles = GetMetadataFilesFromSystemFiles(((MainWindow)Application.Current.MainWindow).userSelectedFiles).ToList();
-            tempFiles.ForEach(f => f.PopulateUpdateList());
-            _files = new ObservableCollection<MetadataFile>(tempFiles);
-
-            foreach (var file in _files)
-            {
-                Updates.AddMany(file.Updates);
-            }
-        }
-
-        private IEnumerable<MetadataFile> GetMetadataFilesFromSystemFiles(List<SystemFile> files)
-        {
-            foreach (SystemFile file in files)
-            {
-                yield return file.MetadataFile;
-            }
         }
 
         private void ConfirmButton_Click(object sender, RoutedEventArgs e)
@@ -78,22 +49,17 @@ namespace MusicMetadataUI
             MessageBox.Show("Not yet implemented.");
         }
 
-        public void OnWindowClosing(object sender, CancelEventArgs e)
+        private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            // Not fixing this problem that it was supposed to fix: 
-            // Could not copy "d:\my documents\visual studio 2017\Projects\MusicMetadataUpdater_v2.0\
-            // MusicMetadataUpdater_v2.0\bin\Debug\MusicMetadataUpdater_v2.0.dll" to 
-            // "bin\Debug\MusicMetadataUpdater_v2.0.dll".Beginning retry 10 in 1000ms.
-            // The process cannot access the file 'bin\Debug\MusicMetadataUpdater_v2.0.dll' because it 
-            // is being used by another process.The file is locked by: "MusicMetadataUI (12328)" 
-            // MusicMetadataUI
-
-            Application.Current.Shutdown();
+            if (Updates == null)
+            {
+                MessageBox.Show("ObservableCollection<MetadataUpdate> Updates is null " +
+                "during Window_Loaded event.");
+            }
+            dgData.ItemsSource = Updates;
+            CollectionView view = (CollectionView)CollectionViewSource.GetDefaultView(dgData.ItemsSource);
+            var groupDescription = new PropertyGroupDescription("MetadataFileName");
+            view.GroupDescriptions.Add(groupDescription);
         }
-
-        //private void Window_Loaded(object sender, RoutedEventArgs e)
-        //{
-        //    lvFiles.Height = this.Height * .8;
-        //}
     }
 }

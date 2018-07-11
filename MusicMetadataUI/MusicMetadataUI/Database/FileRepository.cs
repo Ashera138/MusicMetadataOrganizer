@@ -74,5 +74,10 @@ namespace MusicMetadataUI.Database
         {
             return Task.Run(() => _dbContext.SystemFiles.AsEnumerable().Contains(file));
         }
+
+        public Task<bool> ContainsAsync(MetadataFile file)
+        {
+            return Task.Run(() => _dbContext.MetadataFiles.AsEnumerable().Contains(file));
+        }
     }
 }

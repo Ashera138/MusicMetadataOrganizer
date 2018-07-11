@@ -5,15 +5,18 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
 namespace MusicMetadataUI
 {
-    public class FileViewModel// : INotifyPropertyChanged // implement this
+    // TODO: Flush this class out. Design ideas are written on my graph paper
+    // Eventually write unit tests for this class
+    public class FileViewModel : INotifyPropertyChanged
     {
-        public ObservableCollection<UpdateHelper> Updates { get; set; }
+        public ObservableCollection<MetadataUpdate> Updates { get; set; }
 
         public FileViewModel()
         {
@@ -25,21 +28,14 @@ namespace MusicMetadataUI
             //SaveCommand = new RelayCommand(OnSave);
         }
 
-        //public event PropertyChangedEventHandler PropertyChanged = delegate { };
+        public event PropertyChangedEventHandler PropertyChanged = delegate { };
 
-        //private MetadataFile _metadataFile;
-        //public MetadataFile MetadataFile
-        //{
-        //    get { return _metadataFile; }
-        //    set
-        //    {
-        //        if (!value.Equals(_metadataFile))
-        //        {
-        //            _metadataFile = value;
-        //            PropertyChanged(this, new PropertyChangedEventArgs("MetadataFile"));
-        //        }
-        //    }
-        //}
+        private void RaisePropertyChanged([CallerMemberName] string caller = "")
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(caller));
+        }
+
+        public ObservableCollection<MetadataFile> MetadataFiles { get; private set; }
 
         //public /*async*/ void LoadFile()
         //{
@@ -51,6 +47,6 @@ namespace MusicMetadataUI
         //    //MetadataFile = await _repo.Update(MetadataFile);
         //}
 
-        //public ICommand SaveCommand { get; set; }
+        public ICommand SaveCommand { get; set; }
     }
 }

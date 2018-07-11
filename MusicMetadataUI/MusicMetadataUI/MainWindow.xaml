@@ -5,28 +5,42 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MusicMetadataUI"
         mc:Ignorable="d"
-        Title="Music Metadata Organizer" Height="606.524" Width="932.268" Loaded="OnLoaded">
+        Title="Music Metadata Organizer" Height="600" Width="900" Loaded="OnLoaded">
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="4*"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="10"/>
         </Grid.RowDefinitions>
+        <DockPanel>
+            <Menu Width="Auto" 
+                  Height="20" 
+                  DockPanel.Dock="Top">
+                <MenuItem Header="_File">
+                    <MenuItem Header="_Open"/>
+                    <MenuItem Header="_Close"/>
+                    <MenuItem Header="_Save"/>
+                </MenuItem>
+                <MenuItem Header="_Help"/>
+            </Menu>
+        </DockPanel>
         <TextBlock x:Name="headerTextBlock" 
                    Text="=== Header ==="
+                   Grid.Row="1"
                    HorizontalAlignment="Center"
                    FontSize="20"
                    Margin="5"/>
         <TextBox x:Name="detailsTextBox"
                  Text="No files selected."
-                 Grid.Row="1"
+                 Grid.Row="2"
                  VerticalScrollBarVisibility="Visible"
                  HorizontalAlignment="Stretch" 
                  VerticalAlignment="Stretch"
                  Margin="10" />
         <StackPanel Orientation="Vertical"
-                    Grid.Row="2"
+                    Grid.Row="3"
                     HorizontalAlignment="Stretch"
                     VerticalAlignment="Stretch">
             <Button x:Name="selectFilesButton" 
@@ -64,7 +78,7 @@
         <UserControl Name="busyIndicator" 
                      IsEnabled="False"
                      Visibility="Hidden"
-                     Grid.Row="1"
+                     Grid.Row="2"
                      HorizontalAlignment="Center" 
                      VerticalAlignment="Center">
             <Viewbox Width="50" 

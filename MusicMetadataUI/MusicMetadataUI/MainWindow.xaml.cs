@@ -14,11 +14,13 @@ namespace MusicMetadataUI
         internal List<SystemFile> userSelectedFiles;
         FileRepository _fileRepository;
         List<MetadataFile> _allMetadataFileRecords;
+        ObservableCollection<MetadataUpdate> _allUpdates;
 
         public MainWindow()
         {
             InitializeComponent();
             userSelectedFiles = new List<SystemFile>();
+            _allUpdates = new ObservableCollection<MetadataUpdate>();
             headerTextBlock.Text = "Select some files to start.";
         }
 
@@ -27,7 +29,6 @@ namespace MusicMetadataUI
             _fileRepository = new FileRepository();
             var systemFiles = await _fileRepository.GetFilesAsync();
             _allMetadataFileRecords = await _fileRepository.GetMetadataFilesAsync();
-            // DataContext = _allMetadataFileRecords;
         }
 
         private async void SelectFilesButton_Click(object sender, RoutedEventArgs e)
@@ -39,7 +40,7 @@ namespace MusicMetadataUI
                 detailsTextBox.Text = "Grabbing files...";
                 StartBusyIndicator();
                 userSelectedFiles = await Task.Run(() => FileSearcher.ExtractFiles(directory));
-                FilterFilesAgainstDatabaseRecords();
+                await FilterFilesAgainstDatabaseRecords();
                 StopBusyIndicator();
                 PopulateDetailsTextBoxWithFiles();
             }
@@ -49,25 +50,13 @@ namespace MusicMetadataUI
             saveButton.IsEnabled = false;
         }
 
-        private void FilterFilesAgainstDatabaseRecords()
+        private async Task FilterFilesAgainstDatabaseRecords()
         {
-            // filter query result against _files
             foreach (var file in userSelectedFiles)
             {
-                if (HasMatchInDatabase(file.MetadataFile))
+                if (await _fileRepository.ContainsAsync(file.MetadataFile))
                     file.MetadataFile.CheckForUpdates = false;
             }
-        }
-
-        // consider putting this and similar logic in a database class
-        private bool HasMatchInDatabase(MetadataFile metadatafile)
-        {
-            foreach (MetadataFile metadataFileRecord in _allMetadataFileRecords)
-            {
-                if (metadataFileRecord.Equals(metadatafile))
-                    return true;
-            }
-            return false;
         }
 
         private void PopulateDetailsTextBoxWithFiles()
@@ -89,31 +78,31 @@ namespace MusicMetadataUI
             MessageBox.Show("Not yet implemented.");
         }
 
-        // Holy crap this code is awful
+        // Break this apart and move functionality to other classes if it seems fitting
         private async void CheckMetadataButton_Click(object sender, RoutedEventArgs e)
         {
             headerTextBlock.Text = "Checking for updated metadata, please wait...";
             StartBusyIndicator();
 
+            // populates the API response field for each metadata file that is flagged for update
             foreach (var file in userSelectedFiles.Where(f => f.MetadataFile.CheckForUpdates == true))
             {
                 file.MetadataFile.Response = await GracenoteAPI.QueryAsync(file.MetadataFile);
             }
 
+            // filters all userSelectedFiles to only those where an update is needed
             var systemFilesPendingUpdates = userSelectedFiles.Where(f => f.MetadataFile.IsUpdateNeeded() == true);
 
+            // checks to see if there are any updates needed
             bool updateNeeded = systemFilesPendingUpdates.Any();
             if (updateNeeded)
             {
                 var metadataFilesPendingUpdates = systemFilesPendingUpdates.Select(f => f.MetadataFile).Cast<MetadataFile>().ToList();
-                var allUpdates = ExtractUpdates(metadataFilesPendingUpdates);
-                var updatesAsUpdateHelperObj = Convert(allUpdates);
+                metadataFilesPendingUpdates.ForEach(f => f.PopulateUpdateList());
+                _allUpdates = ExtractUpdates(metadataFilesPendingUpdates);
 
-                this.Visibility = Visibility.Collapsed;
-                var updaterWindow = new UpdaterWindow
-                {
-                    DataContext = new FileViewModel() { Updates = updatesAsUpdateHelperObj }
-                };
+                
+                var updaterWindow = new UpdaterWindow(_allUpdates);
             }
             else
             {
@@ -132,21 +121,11 @@ namespace MusicMetadataUI
             return updates;
         }
 
-        [Obsolete("No longer using the FileEditView so I don't need this")]
-        private ObservableCollection<UpdateHelper> Convert(ObservableCollection<MetadataUpdate> updates)
-        {
-            var convertedUpdates = new ObservableCollection<UpdateHelper>();
-            foreach (MetadataUpdate update in updates)
-            {
-                convertedUpdates.Add(new UpdateHelper(update.MetadataFile));
-            }
-            return convertedUpdates;
-        }
-
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
             // sample code for saving changes to the database
             // _metadataRepository.UpdateMetadataFileAsync(_file);
+            // save file to disk
             MessageBox.Show("Not yet implemented.");
         }
 

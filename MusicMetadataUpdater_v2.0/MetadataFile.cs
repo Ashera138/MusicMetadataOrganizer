@@ -131,15 +131,7 @@ namespace MusicMetadataUpdater_v2._0
 
         private TagLib.File TagLibFile { get; set; }
 
-        // test field
-        [NotMapped]
-        public string Name
-        {
-            get { return this.ToString(); }
-        }
-
         public MetadataFile()
-        //private MetadataFile()
         {
             CreateTagLibFile();
         }
