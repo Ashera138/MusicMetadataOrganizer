@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GalaSoft.MvvmLight;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -9,7 +10,7 @@ using System.Runtime.CompilerServices;
 
 namespace MusicMetadataUpdater_v2._0
 {
-    public class MetadataFile : IFile, INotifyPropertyChanged
+    public class MetadataFile : ObservableObject, IFile//, INotifyPropertyChanged
     {
         [ForeignKey("SystemFile")]
         public int MetadataFileId { get; set; }
@@ -38,8 +39,28 @@ namespace MusicMetadataUpdater_v2._0
         [StringLength(40)]
         public string MediaType { get; set; }
 
+        private bool _changesPending;
+        public bool ChangesPending
+        {
+            get { return _changesPending; }
+            set
+            {
+                Set(() => ChangesPending, ref _changesPending, value);
+            }
+        }
+
         private string _artist;
         [StringLength(100)]
+        public string Artist
+        {
+            get { return _artist; }
+            set
+            {
+                if (Set(() => Artist, ref _artist, value))
+                    ChangesPending = true;
+            }
+        }
+        /*
         public string Artist
         {
             get { return _artist; }
@@ -49,6 +70,7 @@ namespace MusicMetadataUpdater_v2._0
                 RaisePropertyChanged();
             }
         }
+        */
 
         private string _album;
         [StringLength(100)]
@@ -67,10 +89,15 @@ namespace MusicMetadataUpdater_v2._0
         public string Title
         {
             get { return _title; }
+            //set
+            //{
+            //    _title = value;
+            //    RaisePropertyChanged();
+            //}
             set
             {
-                _title = value;
-                RaisePropertyChanged();
+                if (Set(() => Title, ref _title, value))
+                    ChangesPending = true;
             }
         }
 
@@ -127,7 +154,7 @@ namespace MusicMetadataUpdater_v2._0
         [NotMapped]
         public ObservableCollection<MetadataUpdate> Updates = new ObservableCollection<MetadataUpdate>();
 
-        public event PropertyChangedEventHandler PropertyChanged = delegate { };
+        //public event PropertyChangedEventHandler PropertyChanged = delegate { };
 
         private TagLib.File TagLibFile { get; set; }
 
@@ -278,6 +305,7 @@ namespace MusicMetadataUpdater_v2._0
             return updateNeeded;
         }
 
+        // refactor
         public void PopulateUpdateList()
         {
             if (Response.Artist != Artist)
@@ -306,11 +334,12 @@ namespace MusicMetadataUpdater_v2._0
             }
         }
 
+        /*
         private void RaisePropertyChanged([CallerMemberName] string caller = "")
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(caller));
         }
-
+        */
         public override string ToString()
         {
             return $"{Artist} - {Title}";

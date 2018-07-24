@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 d:\my documents\visual studio 2017\Projects\MusicMetadataUpdater_v2.0\MusicMetadataUI\MusicMetadataUI\App.xaml
-3-1539235451
+6-1258540189
 
-181892147901
-781152489184
-MainWindow.xaml;UpdaterView.xaml;UpdaterWindow.xaml;
+22-191272183
+78-680744515
+Views\BusyIndicator.xaml;Views\FileEditView.xaml;MainWindow.xaml;Views\FileOverviewView.xaml;Views\UpdaterView.xaml;UpdaterWindow.xaml;
 
-False
+True
 
